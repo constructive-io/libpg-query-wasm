@@ -14,6 +14,7 @@
     var $Reader = $protobuf.Reader, $Writer = $protobuf.Writer, $util = $protobuf.util;
     
     // Exported root namespace
+    var $pgRecursionLimit = 512;
     var $root = $protobuf.roots["default"] || ($protobuf.roots["default"] = {});
     
     $root.pg_query = (function() {
@@ -93,7 +94,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.version != null && Object.hasOwnProperty.call(message, "version"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.version);
@@ -132,7 +133,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -202,7 +203,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.version != null && Object.hasOwnProperty.call(message, "version"))
                     if (!$util.isInteger(message.version))
@@ -234,7 +235,7 @@
                     throw TypeError(".pg_query.ParseResult: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.ParseResult();
                 if (object.version != null)
@@ -266,7 +267,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -380,7 +381,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.version != null && Object.hasOwnProperty.call(message, "version"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.version);
@@ -419,7 +420,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -489,7 +490,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.version != null && Object.hasOwnProperty.call(message, "version"))
                     if (!$util.isInteger(message.version))
@@ -521,7 +522,7 @@
                     throw TypeError(".pg_query.ScanResult: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.ScanResult();
                 if (object.version != null)
@@ -553,7 +554,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -3074,7 +3075,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.Alias != null && Object.hasOwnProperty.call(message, "Alias"))
                     $root.pg_query.Alias.encode(message.Alias, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -3644,7 +3645,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -4776,7 +4777,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 var properties = {};
                 if (message.Alias != null && Object.hasOwnProperty.call(message, "Alias")) {
@@ -7475,7 +7476,7 @@
                     throw TypeError(".pg_query.Node: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.Node();
                 if (object.Alias != null) {
@@ -8835,7 +8836,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (message.Alias != null && Object.hasOwnProperty.call(message, "Alias")) {
@@ -10268,7 +10269,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.ival != null && Object.hasOwnProperty.call(message, "ival"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.ival);
@@ -10304,7 +10305,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -10368,7 +10369,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.ival != null && Object.hasOwnProperty.call(message, "ival"))
                     if (!$util.isInteger(message.ival))
@@ -10391,7 +10392,7 @@
                     throw TypeError(".pg_query.Integer: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.Integer();
                 if (object.ival != null)
@@ -10413,7 +10414,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults)
@@ -10510,7 +10511,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.fval != null && Object.hasOwnProperty.call(message, "fval"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.fval);
@@ -10546,7 +10547,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -10610,7 +10611,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.fval != null && Object.hasOwnProperty.call(message, "fval"))
                     if (!$util.isString(message.fval))
@@ -10633,7 +10634,7 @@
                     throw TypeError(".pg_query.Float: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.Float();
                 if (object.fval != null)
@@ -10655,7 +10656,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults)
@@ -10752,7 +10753,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.boolval != null && Object.hasOwnProperty.call(message, "boolval"))
                     writer.uint32(/* id 1, wireType 0 =*/8).bool(message.boolval);
@@ -10788,7 +10789,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -10852,7 +10853,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.boolval != null && Object.hasOwnProperty.call(message, "boolval"))
                     if (typeof message.boolval !== "boolean")
@@ -10875,7 +10876,7 @@
                     throw TypeError(".pg_query.Boolean: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.Boolean();
                 if (object.boolval != null)
@@ -10897,7 +10898,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults)
@@ -10994,7 +10995,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.sval != null && Object.hasOwnProperty.call(message, "sval"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.sval);
@@ -11030,7 +11031,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -11094,7 +11095,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.sval != null && Object.hasOwnProperty.call(message, "sval"))
                     if (!$util.isString(message.sval))
@@ -11117,7 +11118,7 @@
                     throw TypeError(".pg_query.String: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.String();
                 if (object.sval != null)
@@ -11139,7 +11140,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults)
@@ -11236,7 +11237,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.bsval != null && Object.hasOwnProperty.call(message, "bsval"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.bsval);
@@ -11272,7 +11273,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -11336,7 +11337,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.bsval != null && Object.hasOwnProperty.call(message, "bsval"))
                     if (!$util.isString(message.bsval))
@@ -11359,7 +11360,7 @@
                     throw TypeError(".pg_query.BitString: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.BitString();
                 if (object.bsval != null)
@@ -11381,7 +11382,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults)
@@ -11479,7 +11480,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.items != null && message.items.length)
                     for (var i = 0; i < message.items.length; ++i)
@@ -11516,7 +11517,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -11582,7 +11583,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.items != null && Object.hasOwnProperty.call(message, "items")) {
                     if (!Array.isArray(message.items))
@@ -11611,7 +11612,7 @@
                     throw TypeError(".pg_query.List: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.List();
                 if (object.items) {
@@ -11641,7 +11642,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -11742,7 +11743,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.items != null && message.items.length)
                     for (var i = 0; i < message.items.length; ++i)
@@ -11779,7 +11780,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -11845,7 +11846,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.items != null && Object.hasOwnProperty.call(message, "items")) {
                     if (!Array.isArray(message.items))
@@ -11874,7 +11875,7 @@
                     throw TypeError(".pg_query.OidList: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.OidList();
                 if (object.items) {
@@ -11904,7 +11905,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -12005,7 +12006,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.items != null && message.items.length)
                     for (var i = 0; i < message.items.length; ++i)
@@ -12042,7 +12043,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -12108,7 +12109,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.items != null && Object.hasOwnProperty.call(message, "items")) {
                     if (!Array.isArray(message.items))
@@ -12137,7 +12138,7 @@
                     throw TypeError(".pg_query.IntList: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.IntList();
                 if (object.items) {
@@ -12167,7 +12168,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -12335,7 +12336,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.ival != null && Object.hasOwnProperty.call(message, "ival"))
                     $root.pg_query.Integer.encode(message.ival, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -12383,7 +12384,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -12471,7 +12472,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 var properties = {};
                 if (message.ival != null && Object.hasOwnProperty.call(message, "ival")) {
@@ -12546,7 +12547,7 @@
                     throw TypeError(".pg_query.A_Const: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.A_Const();
                 if (object.ival != null) {
@@ -12595,7 +12596,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -12731,7 +12732,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.aliasname != null && Object.hasOwnProperty.call(message, "aliasname"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.aliasname);
@@ -12770,7 +12771,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -12840,7 +12841,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.aliasname != null && Object.hasOwnProperty.call(message, "aliasname"))
                     if (!$util.isString(message.aliasname))
@@ -12872,7 +12873,7 @@
                     throw TypeError(".pg_query.Alias: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.Alias();
                 if (object.aliasname != null)
@@ -12904,7 +12905,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -13062,7 +13063,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.catalogname != null && Object.hasOwnProperty.call(message, "catalogname"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.catalogname);
@@ -13110,7 +13111,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -13198,7 +13199,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.catalogname != null && Object.hasOwnProperty.call(message, "catalogname"))
                     if (!$util.isString(message.catalogname))
@@ -13241,7 +13242,7 @@
                     throw TypeError(".pg_query.RangeVar: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.RangeVar();
                 if (object.catalogname != null)
@@ -13278,7 +13279,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -13549,7 +13550,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.functype != null && Object.hasOwnProperty.call(message, "functype"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.functype);
@@ -13631,7 +13632,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -13792,7 +13793,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.functype != null && Object.hasOwnProperty.call(message, "functype"))
                     switch (message.functype) {
@@ -13939,7 +13940,7 @@
                     throw TypeError(".pg_query.TableFunc: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.TableFunc();
                 switch (object.functype) {
@@ -14112,7 +14113,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -14363,7 +14364,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.rel != null && Object.hasOwnProperty.call(message, "rel"))
                     $root.pg_query.RangeVar.encode(message.rel, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -14415,7 +14416,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -14511,7 +14512,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.rel != null && Object.hasOwnProperty.call(message, "rel")) {
                     var error = $root.pg_query.RangeVar.verify(message.rel, long + 1);
@@ -14579,7 +14580,7 @@
                     throw TypeError(".pg_query.IntoClause: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.IntoClause();
                 if (object.rel != null) {
@@ -14663,7 +14664,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -14863,7 +14864,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -14919,7 +14920,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -15028,7 +15029,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -15081,7 +15082,7 @@
                     throw TypeError(".pg_query.Var: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.Var();
                 if (object.xpr != null) {
@@ -15134,7 +15135,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -15319,7 +15320,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -15367,7 +15368,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -15455,7 +15456,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -15506,7 +15507,7 @@
                     throw TypeError(".pg_query.Param: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.Param();
                 if (object.xpr != null) {
@@ -15569,7 +15570,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -15852,7 +15853,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -15929,7 +15930,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -16075,7 +16076,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -16193,7 +16194,7 @@
                     throw TypeError(".pg_query.Aggref: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.Aggref();
                 if (object.xpr != null) {
@@ -16319,7 +16320,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -16526,7 +16527,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -16572,7 +16573,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -16656,7 +16657,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -16705,7 +16706,7 @@
                     throw TypeError(".pg_query.GroupingFunc: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.GroupingFunc();
                 if (object.xpr != null) {
@@ -16754,7 +16755,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -16973,7 +16974,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -17033,7 +17034,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -17145,7 +17146,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -17217,7 +17218,7 @@
                     throw TypeError(".pg_query.WindowFunc: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.WindowFunc();
                 if (object.xpr != null) {
@@ -17283,7 +17284,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -17458,7 +17459,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -17502,7 +17503,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -17582,7 +17583,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -17621,7 +17622,7 @@
                     throw TypeError(".pg_query.WindowFuncRunCondition: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.WindowFuncRunCondition();
                 if (object.xpr != null) {
@@ -17657,7 +17658,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -17794,7 +17795,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -17836,7 +17837,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -17912,7 +17913,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -17946,7 +17947,7 @@
                     throw TypeError(".pg_query.MergeSupportFunc: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.MergeSupportFunc();
                 if (object.xpr != null) {
@@ -17977,7 +17978,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -18167,7 +18168,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -18223,7 +18224,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -18327,7 +18328,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -18395,7 +18396,7 @@
                     throw TypeError(".pg_query.SubscriptingRef: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.SubscriptingRef();
                 if (object.xpr != null) {
@@ -18460,7 +18461,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -18675,7 +18676,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -18730,7 +18731,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -18832,7 +18833,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -18898,7 +18899,7 @@
                     throw TypeError(".pg_query.FuncExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.FuncExpr();
                 if (object.xpr != null) {
@@ -18975,7 +18976,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -19140,7 +19141,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -19184,7 +19185,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -19264,7 +19265,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -19303,7 +19304,7 @@
                     throw TypeError(".pg_query.NamedArgExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.NamedArgExpr();
                 if (object.xpr != null) {
@@ -19339,7 +19340,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -19513,7 +19514,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -19564,7 +19565,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -19658,7 +19659,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -19710,7 +19711,7 @@
                     throw TypeError(".pg_query.OpExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.OpExpr();
                 if (object.xpr != null) {
@@ -19757,7 +19758,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -19944,7 +19945,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -19995,7 +19996,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -20089,7 +20090,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -20141,7 +20142,7 @@
                     throw TypeError(".pg_query.DistinctExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.DistinctExpr();
                 if (object.xpr != null) {
@@ -20188,7 +20189,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -20375,7 +20376,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -20426,7 +20427,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -20520,7 +20521,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -20572,7 +20573,7 @@
                     throw TypeError(".pg_query.NullIfExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.NullIfExpr();
                 if (object.xpr != null) {
@@ -20619,7 +20620,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -20788,7 +20789,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -20835,7 +20836,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -20921,7 +20922,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -20967,7 +20968,7 @@
                     throw TypeError(".pg_query.ScalarArrayOpExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.ScalarArrayOpExpr();
                 if (object.xpr != null) {
@@ -21010,7 +21011,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -21155,7 +21156,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -21198,7 +21199,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -21276,7 +21277,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -21323,7 +21324,7 @@
                     throw TypeError(".pg_query.BoolExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.BoolExpr();
                 if (object.xpr != null) {
@@ -21384,7 +21385,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -21550,7 +21551,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -21599,7 +21600,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -21689,7 +21690,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -21754,7 +21755,7 @@
                     throw TypeError(".pg_query.SubLink: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.SubLink();
                 if (object.xpr != null) {
@@ -21847,7 +21848,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -22115,7 +22116,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -22187,7 +22188,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -22323,7 +22324,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -22434,7 +22435,7 @@
                     throw TypeError(".pg_query.SubPlan: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.SubPlan();
                 if (object.xpr != null) {
@@ -22568,7 +22569,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -22738,7 +22739,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -22777,7 +22778,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -22847,7 +22848,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -22881,7 +22882,7 @@
                     throw TypeError(".pg_query.AlternativeSubPlan: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlternativeSubPlan();
                 if (object.xpr != null) {
@@ -22916,7 +22917,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -23065,7 +23066,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -23111,7 +23112,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -23195,7 +23196,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -23237,7 +23238,7 @@
                     throw TypeError(".pg_query.FieldSelect: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.FieldSelect();
                 if (object.xpr != null) {
@@ -23275,7 +23276,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -23426,7 +23427,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -23472,7 +23473,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -23556,7 +23557,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -23607,7 +23608,7 @@
                     throw TypeError(".pg_query.FieldStore: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.FieldStore();
                 if (object.xpr != null) {
@@ -23659,7 +23660,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -23831,7 +23832,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -23879,7 +23880,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -23967,7 +23968,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -24020,7 +24021,7 @@
                     throw TypeError(".pg_query.RelabelType: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.RelabelType();
                 if (object.xpr != null) {
@@ -24086,7 +24087,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -24247,7 +24248,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -24293,7 +24294,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -24377,7 +24378,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -24427,7 +24428,7 @@
                     throw TypeError(".pg_query.CoerceViaIO: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CoerceViaIO();
                 if (object.xpr != null) {
@@ -24491,7 +24492,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -24667,7 +24668,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -24717,7 +24718,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -24809,7 +24810,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -24867,7 +24868,7 @@
                     throw TypeError(".pg_query.ArrayCoerceExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.ArrayCoerceExpr();
                 if (object.xpr != null) {
@@ -24938,7 +24939,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -25093,7 +25094,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -25137,7 +25138,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -25217,7 +25218,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -25264,7 +25265,7 @@
                     throw TypeError(".pg_query.ConvertRowtypeExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.ConvertRowtypeExpr();
                 if (object.xpr != null) {
@@ -25326,7 +25327,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -25463,7 +25464,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -25505,7 +25506,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -25581,7 +25582,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -25617,7 +25618,7 @@
                     throw TypeError(".pg_query.CollateExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CollateExpr();
                 if (object.xpr != null) {
@@ -25651,7 +25652,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -25813,7 +25814,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -25862,7 +25863,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -25952,7 +25953,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -26005,7 +26006,7 @@
                     throw TypeError(".pg_query.CaseExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CaseExpr();
                 if (object.xpr != null) {
@@ -26056,7 +26057,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -26203,7 +26204,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -26245,7 +26246,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -26321,7 +26322,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -26359,7 +26360,7 @@
                     throw TypeError(".pg_query.CaseWhen: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CaseWhen();
                 if (object.xpr != null) {
@@ -26396,7 +26397,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -26530,7 +26531,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -26572,7 +26573,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -26648,7 +26649,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -26682,7 +26683,7 @@
                     throw TypeError(".pg_query.CaseTestExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CaseTestExpr();
                 if (object.xpr != null) {
@@ -26713,7 +26714,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -26875,7 +26876,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -26924,7 +26925,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -27014,7 +27015,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -27063,7 +27064,7 @@
                     throw TypeError(".pg_query.ArrayExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.ArrayExpr();
                 if (object.xpr != null) {
@@ -27108,7 +27109,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -27275,7 +27276,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -27323,7 +27324,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -27411,7 +27412,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -27471,7 +27472,7 @@
                     throw TypeError(".pg_query.RowExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.RowExpr();
                 if (object.xpr != null) {
@@ -27548,7 +27549,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -27728,7 +27729,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -27781,7 +27782,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -27879,7 +27880,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -27962,7 +27963,7 @@
                     throw TypeError(".pg_query.RowCompareExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.RowCompareExpr();
                 if (object.xpr != null) {
@@ -28073,7 +28074,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -28243,7 +28244,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -28288,7 +28289,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -28370,7 +28371,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -28413,7 +28414,7 @@
                     throw TypeError(".pg_query.CoalesceExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CoalesceExpr();
                 if (object.xpr != null) {
@@ -28454,7 +28455,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -28623,7 +28624,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -28672,7 +28673,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -28762,7 +28763,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -28817,7 +28818,7 @@
                     throw TypeError(".pg_query.MinMaxExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.MinMaxExpr();
                 if (object.xpr != null) {
@@ -28880,7 +28881,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -29036,7 +29037,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -29080,7 +29081,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -29160,7 +29161,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -29216,7 +29217,7 @@
                     throw TypeError(".pg_query.SQLValueFunction: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.SQLValueFunction();
                 if (object.xpr != null) {
@@ -29319,7 +29320,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -29522,7 +29523,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -29581,7 +29582,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -29691,7 +29692,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -29782,7 +29783,7 @@
                     throw TypeError(".pg_query.XmlExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.XmlExpr();
                 if (object.xpr != null) {
@@ -29911,7 +29912,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -30068,7 +30069,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.format_type != null && Object.hasOwnProperty.call(message, "format_type"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.format_type);
@@ -30108,7 +30109,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -30180,7 +30181,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.format_type != null && Object.hasOwnProperty.call(message, "format_type"))
                     switch (message.format_type) {
@@ -30224,7 +30225,7 @@
                     throw TypeError(".pg_query.JsonFormat: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.JsonFormat();
                 switch (object.format_type) {
@@ -30298,7 +30299,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -30420,7 +30421,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.format != null && Object.hasOwnProperty.call(message, "format"))
                     $root.pg_query.JsonFormat.encode(message.format, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -30460,7 +30461,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -30532,7 +30533,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.format != null && Object.hasOwnProperty.call(message, "format")) {
                     var error = $root.pg_query.JsonFormat.verify(message.format, long + 1);
@@ -30563,7 +30564,7 @@
                     throw TypeError(".pg_query.JsonReturning: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.JsonReturning();
                 if (object.format != null) {
@@ -30592,7 +30593,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -30714,7 +30715,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.raw_expr != null && Object.hasOwnProperty.call(message, "raw_expr"))
                     $root.pg_query.Node.encode(message.raw_expr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -30754,7 +30755,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -30826,7 +30827,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.raw_expr != null && Object.hasOwnProperty.call(message, "raw_expr")) {
                     var error = $root.pg_query.Node.verify(message.raw_expr, long + 1);
@@ -30861,7 +30862,7 @@
                     throw TypeError(".pg_query.JsonValueExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.JsonValueExpr();
                 if (object.raw_expr != null) {
@@ -30896,7 +30897,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -31073,7 +31074,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -31126,7 +31127,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -31224,7 +31225,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -31296,7 +31297,7 @@
                     throw TypeError(".pg_query.JsonConstructorExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.JsonConstructorExpr();
                 if (object.xpr != null) {
@@ -31392,7 +31393,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -31554,7 +31555,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.expr != null && Object.hasOwnProperty.call(message, "expr"))
                     $root.pg_query.Node.encode(message.expr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -31598,7 +31599,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -31678,7 +31679,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.expr != null && Object.hasOwnProperty.call(message, "expr")) {
                     var error = $root.pg_query.Node.verify(message.expr, long + 1);
@@ -31725,7 +31726,7 @@
                     throw TypeError(".pg_query.JsonIsPredicate: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.JsonIsPredicate();
                 if (object.expr != null) {
@@ -31787,7 +31788,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -31924,7 +31925,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.btype != null && Object.hasOwnProperty.call(message, "btype"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.btype);
@@ -31966,7 +31967,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -32042,7 +32043,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.btype != null && Object.hasOwnProperty.call(message, "btype"))
                     switch (message.btype) {
@@ -32089,7 +32090,7 @@
                     throw TypeError(".pg_query.JsonBehavior: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.JsonBehavior();
                 switch (object.btype) {
@@ -32166,7 +32167,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -32419,7 +32420,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -32489,7 +32490,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -32621,7 +32622,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -32734,7 +32735,7 @@
                     throw TypeError(".pg_query.JsonExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.JsonExpr();
                 if (object.xpr != null) {
@@ -32877,7 +32878,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -33031,7 +33032,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
@@ -33067,7 +33068,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -33131,7 +33132,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                     if (!$util.isString(message.name))
@@ -33154,7 +33155,7 @@
                     throw TypeError(".pg_query.JsonTablePath: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.JsonTablePath();
                 if (object.name != null)
@@ -33176,7 +33177,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults)
@@ -33318,7 +33319,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.plan != null && Object.hasOwnProperty.call(message, "plan"))
                     $root.pg_query.Node.encode(message.plan, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -33364,7 +33365,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -33448,7 +33449,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.plan != null && Object.hasOwnProperty.call(message, "plan")) {
                     var error = $root.pg_query.Node.verify(message.plan, long + 1);
@@ -33492,7 +33493,7 @@
                     throw TypeError(".pg_query.JsonTablePathScan: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.JsonTablePathScan();
                 if (object.plan != null) {
@@ -33533,7 +33534,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -33664,7 +33665,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.plan != null && Object.hasOwnProperty.call(message, "plan"))
                     $root.pg_query.Node.encode(message.plan, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -33704,7 +33705,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -33776,7 +33777,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.plan != null && Object.hasOwnProperty.call(message, "plan")) {
                     var error = $root.pg_query.Node.verify(message.plan, long + 1);
@@ -33811,7 +33812,7 @@
                     throw TypeError(".pg_query.JsonTableSiblingJoin: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.JsonTableSiblingJoin();
                 if (object.plan != null) {
@@ -33846,7 +33847,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -33986,7 +33987,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -34030,7 +34031,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -34110,7 +34111,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -34155,7 +34156,7 @@
                     throw TypeError(".pg_query.NullTest: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.NullTest();
                 if (object.xpr != null) {
@@ -34209,7 +34210,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -34346,7 +34347,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -34388,7 +34389,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -34464,7 +34465,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -34510,7 +34511,7 @@
                     throw TypeError(".pg_query.BooleanTest: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.BooleanTest();
                 if (object.xpr != null) {
@@ -34578,7 +34579,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -34732,7 +34733,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.matchKind != null && Object.hasOwnProperty.call(message, "matchKind"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.matchKind);
@@ -34780,7 +34781,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -34868,7 +34869,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.matchKind != null && Object.hasOwnProperty.call(message, "matchKind"))
                     switch (message.matchKind) {
@@ -34946,7 +34947,7 @@
                     throw TypeError(".pg_query.MergeAction: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.MergeAction();
                 switch (object.matchKind) {
@@ -35083,7 +35084,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -35258,7 +35259,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -35306,7 +35307,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -35394,7 +35395,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -35447,7 +35448,7 @@
                     throw TypeError(".pg_query.CoerceToDomain: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CoerceToDomain();
                 if (object.xpr != null) {
@@ -35513,7 +35514,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -35665,7 +35666,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -35709,7 +35710,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -35789,7 +35790,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -35826,7 +35827,7 @@
                     throw TypeError(".pg_query.CoerceToDomainValue: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CoerceToDomainValue();
                 if (object.xpr != null) {
@@ -35859,7 +35860,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -36005,7 +36006,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -36049,7 +36050,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -36129,7 +36130,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -36166,7 +36167,7 @@
                     throw TypeError(".pg_query.SetToDefault: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.SetToDefault();
                 if (object.xpr != null) {
@@ -36199,7 +36200,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -36336,7 +36337,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -36378,7 +36379,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -36454,7 +36455,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -36488,7 +36489,7 @@
                     throw TypeError(".pg_query.CurrentOfExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CurrentOfExpr();
                 if (object.xpr != null) {
@@ -36519,7 +36520,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -36644,7 +36645,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -36684,7 +36685,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -36756,7 +36757,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -36787,7 +36788,7 @@
                     throw TypeError(".pg_query.NextValueExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.NextValueExpr();
                 if (object.xpr != null) {
@@ -36816,7 +36817,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -36947,7 +36948,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -36989,7 +36990,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -37065,7 +37066,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -37101,7 +37102,7 @@
                     throw TypeError(".pg_query.InferenceElem: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.InferenceElem();
                 if (object.xpr != null) {
@@ -37135,7 +37136,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -37305,7 +37306,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr"))
                     $root.pg_query.Node.encode(message.xpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -37355,7 +37356,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -37447,7 +37448,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xpr != null && Object.hasOwnProperty.call(message, "xpr")) {
                     var error = $root.pg_query.Node.verify(message.xpr, long + 1);
@@ -37495,7 +37496,7 @@
                     throw TypeError(".pg_query.TargetEntry: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.TargetEntry();
                 if (object.xpr != null) {
@@ -37537,7 +37538,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -37656,7 +37657,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.rtindex != null && Object.hasOwnProperty.call(message, "rtindex"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.rtindex);
@@ -37692,7 +37693,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -37756,7 +37757,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.rtindex != null && Object.hasOwnProperty.call(message, "rtindex"))
                     if (!$util.isInteger(message.rtindex))
@@ -37779,7 +37780,7 @@
                     throw TypeError(".pg_query.RangeTblRef: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.RangeTblRef();
                 if (object.rtindex != null)
@@ -37801,7 +37802,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults)
@@ -37971,7 +37972,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.jointype != null && Object.hasOwnProperty.call(message, "jointype"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.jointype);
@@ -38024,7 +38025,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -38122,7 +38123,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.jointype != null && Object.hasOwnProperty.call(message, "jointype"))
                     switch (message.jointype) {
@@ -38198,7 +38199,7 @@
                     throw TypeError(".pg_query.JoinExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.JoinExpr();
                 switch (object.jointype) {
@@ -38305,7 +38306,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -38441,7 +38442,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.fromlist != null && message.fromlist.length)
                     for (var i = 0; i < message.fromlist.length; ++i)
@@ -38480,7 +38481,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -38550,7 +38551,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.fromlist != null && Object.hasOwnProperty.call(message, "fromlist")) {
                     if (!Array.isArray(message.fromlist))
@@ -38584,7 +38585,7 @@
                     throw TypeError(".pg_query.FromExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.FromExpr();
                 if (object.fromlist) {
@@ -38619,7 +38620,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -38789,7 +38790,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.action != null && Object.hasOwnProperty.call(message, "action"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.action);
@@ -38842,7 +38843,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -38940,7 +38941,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.action != null && Object.hasOwnProperty.call(message, "action"))
                     switch (message.action) {
@@ -39013,7 +39014,7 @@
                     throw TypeError(".pg_query.OnConflictExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.OnConflictExpr();
                 switch (object.action) {
@@ -39101,7 +39102,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -39614,7 +39615,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.commandType != null && Object.hasOwnProperty.call(message, "commandType"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.commandType);
@@ -39746,7 +39747,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -40002,7 +40003,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.commandType != null && Object.hasOwnProperty.call(message, "commandType"))
                     switch (message.commandType) {
@@ -40283,7 +40284,7 @@
                     throw TypeError(".pg_query.Query: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.Query();
                 switch (object.commandType) {
@@ -40639,7 +40640,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -40970,7 +40971,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.names != null && message.names.length)
                     for (var i = 0; i < message.names.length; ++i)
@@ -41023,7 +41024,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -41121,7 +41122,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.names != null && Object.hasOwnProperty.call(message, "names")) {
                     if (!Array.isArray(message.names))
@@ -41183,7 +41184,7 @@
                     throw TypeError(".pg_query.TypeName: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.TypeName();
                 if (object.names) {
@@ -41243,7 +41244,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -41383,7 +41384,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.fields != null && message.fields.length)
                     for (var i = 0; i < message.fields.length; ++i)
@@ -41422,7 +41423,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -41492,7 +41493,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.fields != null && Object.hasOwnProperty.call(message, "fields")) {
                     if (!Array.isArray(message.fields))
@@ -41524,7 +41525,7 @@
                     throw TypeError(".pg_query.ColumnRef: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.ColumnRef();
                 if (object.fields) {
@@ -41556,7 +41557,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -41669,7 +41670,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.number != null && Object.hasOwnProperty.call(message, "number"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.number);
@@ -41707,7 +41708,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -41775,7 +41776,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.number != null && Object.hasOwnProperty.call(message, "number"))
                     if (!$util.isInteger(message.number))
@@ -41801,7 +41802,7 @@
                     throw TypeError(".pg_query.ParamRef: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.ParamRef();
                 if (object.number != null)
@@ -41825,7 +41826,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -41963,7 +41964,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.kind != null && Object.hasOwnProperty.call(message, "kind"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.kind);
@@ -42008,7 +42009,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -42090,7 +42091,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.kind != null && Object.hasOwnProperty.call(message, "kind"))
                     switch (message.kind) {
@@ -42153,7 +42154,7 @@
                     throw TypeError(".pg_query.A_Expr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.A_Expr();
                 switch (object.kind) {
@@ -42263,7 +42264,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -42395,7 +42396,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.arg != null && Object.hasOwnProperty.call(message, "arg"))
                     $root.pg_query.Node.encode(message.arg, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -42435,7 +42436,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -42507,7 +42508,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.arg != null && Object.hasOwnProperty.call(message, "arg")) {
                     var error = $root.pg_query.Node.verify(message.arg, long + 1);
@@ -42540,7 +42541,7 @@
                     throw TypeError(".pg_query.TypeCast: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.TypeCast();
                 if (object.arg != null) {
@@ -42572,7 +42573,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -42695,7 +42696,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.arg != null && Object.hasOwnProperty.call(message, "arg"))
                     $root.pg_query.Node.encode(message.arg, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -42736,7 +42737,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -42810,7 +42811,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.arg != null && Object.hasOwnProperty.call(message, "arg")) {
                     var error = $root.pg_query.Node.verify(message.arg, long + 1);
@@ -42847,7 +42848,7 @@
                     throw TypeError(".pg_query.CollateClause: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CollateClause();
                 if (object.arg != null) {
@@ -42884,7 +42885,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -43010,7 +43011,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.roletype != null && Object.hasOwnProperty.call(message, "roletype"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.roletype);
@@ -43050,7 +43051,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -43122,7 +43123,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.roletype != null && Object.hasOwnProperty.call(message, "roletype"))
                     switch (message.roletype) {
@@ -43160,7 +43161,7 @@
                     throw TypeError(".pg_query.RoleSpec: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.RoleSpec();
                 switch (object.roletype) {
@@ -43216,7 +43217,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -43413,7 +43414,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.funcname != null && message.funcname.length)
                     for (var i = 0; i < message.funcname.length; ++i)
@@ -43472,7 +43473,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -43582,7 +43583,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.funcname != null && Object.hasOwnProperty.call(message, "funcname")) {
                     if (!Array.isArray(message.funcname))
@@ -43665,7 +43666,7 @@
                     throw TypeError(".pg_query.FuncCall: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.FuncCall();
                 if (object.funcname) {
@@ -43763,7 +43764,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -43893,7 +43894,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 return writer;
             };
@@ -43927,7 +43928,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -43987,7 +43988,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 return null;
             };
@@ -44124,7 +44125,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.is_slice != null && Object.hasOwnProperty.call(message, "is_slice"))
                     writer.uint32(/* id 1, wireType 0 =*/8).bool(message.is_slice);
@@ -44164,7 +44165,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -44236,7 +44237,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.is_slice != null && Object.hasOwnProperty.call(message, "is_slice"))
                     if (typeof message.is_slice !== "boolean")
@@ -44269,7 +44270,7 @@
                     throw TypeError(".pg_query.A_Indices: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.A_Indices();
                 if (object.is_slice != null)
@@ -44301,7 +44302,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -44415,7 +44416,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.arg != null && Object.hasOwnProperty.call(message, "arg"))
                     $root.pg_query.Node.encode(message.arg, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -44454,7 +44455,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -44524,7 +44525,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.arg != null && Object.hasOwnProperty.call(message, "arg")) {
                     var error = $root.pg_query.Node.verify(message.arg, long + 1);
@@ -44558,7 +44559,7 @@
                     throw TypeError(".pg_query.A_Indirection: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.A_Indirection();
                 if (object.arg != null) {
@@ -44593,7 +44594,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -44707,7 +44708,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.elements != null && message.elements.length)
                     for (var i = 0; i < message.elements.length; ++i)
@@ -44746,7 +44747,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -44816,7 +44817,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.elements != null && Object.hasOwnProperty.call(message, "elements")) {
                     if (!Array.isArray(message.elements))
@@ -44848,7 +44849,7 @@
                     throw TypeError(".pg_query.A_ArrayExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.A_ArrayExpr();
                 if (object.elements) {
@@ -44880,7 +44881,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -45012,7 +45013,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
@@ -45055,7 +45056,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -45133,7 +45134,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                     if (!$util.isString(message.name))
@@ -45173,7 +45174,7 @@
                     throw TypeError(".pg_query.ResTarget: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.ResTarget();
                 if (object.name != null)
@@ -45212,7 +45213,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -45341,7 +45342,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.source != null && Object.hasOwnProperty.call(message, "source"))
                     $root.pg_query.Node.encode(message.source, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -45381,7 +45382,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -45453,7 +45454,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.source != null && Object.hasOwnProperty.call(message, "source")) {
                     var error = $root.pg_query.Node.verify(message.source, long + 1);
@@ -45484,7 +45485,7 @@
                     throw TypeError(".pg_query.MultiAssignRef: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.MultiAssignRef();
                 if (object.source != null) {
@@ -45513,7 +45514,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -45654,7 +45655,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.node != null && Object.hasOwnProperty.call(message, "node"))
                     $root.pg_query.Node.encode(message.node, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -45699,7 +45700,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -45781,7 +45782,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.node != null && Object.hasOwnProperty.call(message, "node")) {
                     var error = $root.pg_query.Node.verify(message.node, long + 1);
@@ -45839,7 +45840,7 @@
                     throw TypeError(".pg_query.SortBy: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.SortBy();
                 if (object.node != null) {
@@ -45928,7 +45929,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -46107,7 +46108,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
@@ -46159,7 +46160,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -46255,7 +46256,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                     if (!$util.isString(message.name))
@@ -46315,7 +46316,7 @@
                     throw TypeError(".pg_query.WindowDef: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.WindowDef();
                 if (object.name != null)
@@ -46373,7 +46374,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -46518,7 +46519,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.lateral != null && Object.hasOwnProperty.call(message, "lateral"))
                     writer.uint32(/* id 1, wireType 0 =*/8).bool(message.lateral);
@@ -46558,7 +46559,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -46630,7 +46631,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.lateral != null && Object.hasOwnProperty.call(message, "lateral"))
                     if (typeof message.lateral !== "boolean")
@@ -46663,7 +46664,7 @@
                     throw TypeError(".pg_query.RangeSubselect: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.RangeSubselect();
                 if (object.lateral != null)
@@ -46695,7 +46696,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -46846,7 +46847,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.lateral != null && Object.hasOwnProperty.call(message, "lateral"))
                     writer.uint32(/* id 1, wireType 0 =*/8).bool(message.lateral);
@@ -46894,7 +46895,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -46982,7 +46983,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.lateral != null && Object.hasOwnProperty.call(message, "lateral"))
                     if (typeof message.lateral !== "boolean")
@@ -47034,7 +47035,7 @@
                     throw TypeError(".pg_query.RangeFunction: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.RangeFunction();
                 if (object.lateral != null)
@@ -47085,7 +47086,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -47262,7 +47263,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.lateral != null && Object.hasOwnProperty.call(message, "lateral"))
                     writer.uint32(/* id 1, wireType 0 =*/8).bool(message.lateral);
@@ -47312,7 +47313,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -47404,7 +47405,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.lateral != null && Object.hasOwnProperty.call(message, "lateral"))
                     if (typeof message.lateral !== "boolean")
@@ -47463,7 +47464,7 @@
                     throw TypeError(".pg_query.RangeTableFunc: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.RangeTableFunc();
                 if (object.lateral != null)
@@ -47522,7 +47523,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -47700,7 +47701,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.colname != null && Object.hasOwnProperty.call(message, "colname"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.colname);
@@ -47748,7 +47749,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -47836,7 +47837,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.colname != null && Object.hasOwnProperty.call(message, "colname"))
                     if (!$util.isString(message.colname))
@@ -47883,7 +47884,7 @@
                     throw TypeError(".pg_query.RangeTableFuncCol: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.RangeTableFuncCol();
                 if (object.colname != null)
@@ -47926,7 +47927,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -48080,7 +48081,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.relation != null && Object.hasOwnProperty.call(message, "relation"))
                     $root.pg_query.Node.encode(message.relation, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -48126,7 +48127,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -48210,7 +48211,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.relation != null && Object.hasOwnProperty.call(message, "relation")) {
                     var error = $root.pg_query.Node.verify(message.relation, long + 1);
@@ -48261,7 +48262,7 @@
                     throw TypeError(".pg_query.RangeTableSample: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.RangeTableSample();
                 if (object.relation != null) {
@@ -48313,7 +48314,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -48595,7 +48596,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.colname != null && Object.hasOwnProperty.call(message, "colname"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.colname);
@@ -48669,7 +48670,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -48809,7 +48810,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.colname != null && Object.hasOwnProperty.call(message, "colname"))
                     if (!$util.isString(message.colname))
@@ -48908,7 +48909,7 @@
                     throw TypeError(".pg_query.ColumnDef: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.ColumnDef();
                 if (object.colname != null)
@@ -48997,7 +48998,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -49175,7 +49176,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.relation != null && Object.hasOwnProperty.call(message, "relation"))
                     $root.pg_query.RangeVar.encode(message.relation, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -49215,7 +49216,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -49287,7 +49288,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.relation != null && Object.hasOwnProperty.call(message, "relation")) {
                     var error = $root.pg_query.RangeVar.verify(message.relation, long + 1);
@@ -49318,7 +49319,7 @@
                     throw TypeError(".pg_query.TableLikeClause: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.TableLikeClause();
                 if (object.relation != null) {
@@ -49347,7 +49348,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -49517,7 +49518,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
@@ -49570,7 +49571,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -49668,7 +49669,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                     if (!$util.isString(message.name))
@@ -49747,7 +49748,7 @@
                     throw TypeError(".pg_query.IndexElem: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.IndexElem();
                 if (object.name != null)
@@ -49858,7 +49859,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -50024,7 +50025,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.defnamespace != null && Object.hasOwnProperty.call(message, "defnamespace"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.defnamespace);
@@ -50068,7 +50069,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -50148,7 +50149,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.defnamespace != null && Object.hasOwnProperty.call(message, "defnamespace"))
                     if (!$util.isString(message.defnamespace))
@@ -50193,7 +50194,7 @@
                     throw TypeError(".pg_query.DefElem: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.DefElem();
                 if (object.defnamespace != null)
@@ -50252,7 +50253,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -50381,7 +50382,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.lockedRels != null && message.lockedRels.length)
                     for (var i = 0; i < message.lockedRels.length; ++i)
@@ -50422,7 +50423,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -50496,7 +50497,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.lockedRels != null && Object.hasOwnProperty.call(message, "lockedRels")) {
                     if (!Array.isArray(message.lockedRels))
@@ -50547,7 +50548,7 @@
                     throw TypeError(".pg_query.LockingClause: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.LockingClause();
                 if (object.lockedRels) {
@@ -50633,7 +50634,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -50777,7 +50778,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.xmloption != null && Object.hasOwnProperty.call(message, "xmloption"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.xmloption);
@@ -50821,7 +50822,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -50901,7 +50902,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.xmloption != null && Object.hasOwnProperty.call(message, "xmloption"))
                     switch (message.xmloption) {
@@ -50946,7 +50947,7 @@
                     throw TypeError(".pg_query.XmlSerialize: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.XmlSerialize();
                 switch (object.xmloption) {
@@ -51000,7 +51001,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -51148,7 +51149,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
@@ -51194,7 +51195,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -51278,7 +51279,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                     if (!$util.isString(message.name))
@@ -51327,7 +51328,7 @@
                     throw TypeError(".pg_query.PartitionElem: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.PartitionElem();
                 if (object.name != null)
@@ -51376,7 +51377,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -51513,7 +51514,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.strategy != null && Object.hasOwnProperty.call(message, "strategy"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.strategy);
@@ -51554,7 +51555,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -51628,7 +51629,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.strategy != null && Object.hasOwnProperty.call(message, "strategy"))
                     switch (message.strategy) {
@@ -51670,7 +51671,7 @@
                     throw TypeError(".pg_query.PartitionSpec: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.PartitionSpec();
                 switch (object.strategy) {
@@ -51726,7 +51727,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -51900,7 +51901,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.strategy != null && Object.hasOwnProperty.call(message, "strategy"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.strategy);
@@ -51953,7 +51954,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -52051,7 +52052,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.strategy != null && Object.hasOwnProperty.call(message, "strategy"))
                     if (!$util.isString(message.strategy))
@@ -52113,7 +52114,7 @@
                     throw TypeError(".pg_query.PartitionBoundSpec: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.PartitionBoundSpec();
                 if (object.strategy != null)
@@ -52173,7 +52174,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -52321,7 +52322,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.kind != null && Object.hasOwnProperty.call(message, "kind"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.kind);
@@ -52361,7 +52362,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -52433,7 +52434,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.kind != null && Object.hasOwnProperty.call(message, "kind"))
                     switch (message.kind) {
@@ -52471,7 +52472,7 @@
                     throw TypeError(".pg_query.PartitionRangeDatum: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.PartitionRangeDatum();
                 switch (object.kind) {
@@ -52522,7 +52523,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -52617,7 +52618,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 return writer;
             };
@@ -52651,7 +52652,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -52711,7 +52712,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 return null;
             };
@@ -52848,7 +52849,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                     $root.pg_query.RangeVar.encode(message.name, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -52888,7 +52889,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -52960,7 +52961,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.name != null && Object.hasOwnProperty.call(message, "name")) {
                     var error = $root.pg_query.RangeVar.verify(message.name, long + 1);
@@ -52993,7 +52994,7 @@
                     throw TypeError(".pg_query.PartitionCmd: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.PartitionCmd();
                 if (object.name != null) {
@@ -53025,7 +53026,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -53417,7 +53418,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.alias != null && Object.hasOwnProperty.call(message, "alias"))
                     $root.pg_query.Alias.encode(message.alias, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -53524,7 +53525,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -53730,7 +53731,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.alias != null && Object.hasOwnProperty.call(message, "alias")) {
                     var error = $root.pg_query.Alias.verify(message.alias, long + 1);
@@ -53938,7 +53939,7 @@
                     throw TypeError(".pg_query.RangeTblEntry: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.RangeTblEntry();
                 if (object.alias != null) {
@@ -54204,7 +54205,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -54481,7 +54482,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.relid != null && Object.hasOwnProperty.call(message, "relid"))
                     writer.uint32(/* id 1, wireType 0 =*/8).uint32(message.relid);
@@ -54541,7 +54542,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -54668,7 +54669,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.relid != null && Object.hasOwnProperty.call(message, "relid"))
                     if (!$util.isInteger(message.relid))
@@ -54721,7 +54722,7 @@
                     throw TypeError(".pg_query.RTEPermissionInfo: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.RTEPermissionInfo();
                 if (object.relid != null)
@@ -54798,7 +54799,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -55008,7 +55009,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.funcexpr != null && Object.hasOwnProperty.call(message, "funcexpr"))
                     $root.pg_query.Node.encode(message.funcexpr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -55064,7 +55065,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -55173,7 +55174,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.funcexpr != null && Object.hasOwnProperty.call(message, "funcexpr")) {
                     var error = $root.pg_query.Node.verify(message.funcexpr, long + 1);
@@ -55244,7 +55245,7 @@
                     throw TypeError(".pg_query.RangeTblFunction: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.RangeTblFunction();
                 if (object.funcexpr != null) {
@@ -55325,7 +55326,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -55482,7 +55483,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.tsmhandler != null && Object.hasOwnProperty.call(message, "tsmhandler"))
                     writer.uint32(/* id 1, wireType 0 =*/8).uint32(message.tsmhandler);
@@ -55523,7 +55524,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -55597,7 +55598,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.tsmhandler != null && Object.hasOwnProperty.call(message, "tsmhandler"))
                     if (!$util.isInteger(message.tsmhandler))
@@ -55634,7 +55635,7 @@
                     throw TypeError(".pg_query.TableSampleClause: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.TableSampleClause();
                 if (object.tsmhandler != null)
@@ -55671,7 +55672,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -55815,7 +55816,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.kind != null && Object.hasOwnProperty.call(message, "kind"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.kind);
@@ -55859,7 +55860,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -55939,7 +55940,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.kind != null && Object.hasOwnProperty.call(message, "kind"))
                     switch (message.kind) {
@@ -55986,7 +55987,7 @@
                     throw TypeError(".pg_query.WithCheckOption: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.WithCheckOption();
                 switch (object.kind) {
@@ -56053,7 +56054,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -56199,7 +56200,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.tleSortGroupRef != null && Object.hasOwnProperty.call(message, "tleSortGroupRef"))
                     writer.uint32(/* id 1, wireType 0 =*/8).uint32(message.tleSortGroupRef);
@@ -56243,7 +56244,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -56323,7 +56324,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.tleSortGroupRef != null && Object.hasOwnProperty.call(message, "tleSortGroupRef"))
                     if (!$util.isInteger(message.tleSortGroupRef))
@@ -56358,7 +56359,7 @@
                     throw TypeError(".pg_query.SortGroupClause: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.SortGroupClause();
                 if (object.tleSortGroupRef != null)
@@ -56388,7 +56389,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -56517,7 +56518,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.kind != null && Object.hasOwnProperty.call(message, "kind"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.kind);
@@ -56558,7 +56559,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -56632,7 +56633,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.kind != null && Object.hasOwnProperty.call(message, "kind"))
                     switch (message.kind) {
@@ -56676,7 +56677,7 @@
                     throw TypeError(".pg_query.GroupingSet: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.GroupingSet();
                 switch (object.kind) {
@@ -56740,7 +56741,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -56967,7 +56968,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
@@ -57031,7 +57032,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -57151,7 +57152,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                     if (!$util.isString(message.name))
@@ -57229,7 +57230,7 @@
                     throw TypeError(".pg_query.WindowClause: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.WindowClause();
                 if (object.name != null)
@@ -57299,7 +57300,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -57471,7 +57472,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.rti != null && Object.hasOwnProperty.call(message, "rti"))
                     writer.uint32(/* id 1, wireType 0 =*/8).uint32(message.rti);
@@ -57513,7 +57514,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -57589,7 +57590,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.rti != null && Object.hasOwnProperty.call(message, "rti"))
                     if (!$util.isInteger(message.rti))
@@ -57637,7 +57638,7 @@
                     throw TypeError(".pg_query.RowMarkClause: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.RowMarkClause();
                 if (object.rti != null)
@@ -57717,7 +57718,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -57843,7 +57844,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.ctes != null && message.ctes.length)
                     for (var i = 0; i < message.ctes.length; ++i)
@@ -57884,7 +57885,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -57958,7 +57959,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.ctes != null && Object.hasOwnProperty.call(message, "ctes")) {
                     if (!Array.isArray(message.ctes))
@@ -57993,7 +57994,7 @@
                     throw TypeError(".pg_query.WithClause: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.WithClause();
                 if (object.ctes) {
@@ -58027,7 +58028,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -58163,7 +58164,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.indexElems != null && message.indexElems.length)
                     for (var i = 0; i < message.indexElems.length; ++i)
@@ -58206,7 +58207,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -58284,7 +58285,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.indexElems != null && Object.hasOwnProperty.call(message, "indexElems")) {
                     if (!Array.isArray(message.indexElems))
@@ -58324,7 +58325,7 @@
                     throw TypeError(".pg_query.InferClause: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.InferClause();
                 if (object.indexElems) {
@@ -58363,7 +58364,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -58511,7 +58512,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.action != null && Object.hasOwnProperty.call(message, "action"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.action);
@@ -58556,7 +58557,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -58638,7 +58639,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.action != null && Object.hasOwnProperty.call(message, "action"))
                     switch (message.action) {
@@ -58690,7 +58691,7 @@
                     throw TypeError(".pg_query.OnConflictClause: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.OnConflictClause();
                 switch (object.action) {
@@ -58756,7 +58757,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -58898,7 +58899,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.search_col_list != null && message.search_col_list.length)
                     for (var i = 0; i < message.search_col_list.length; ++i)
@@ -58941,7 +58942,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -59019,7 +59020,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.search_col_list != null && Object.hasOwnProperty.call(message, "search_col_list")) {
                     if (!Array.isArray(message.search_col_list))
@@ -59057,7 +59058,7 @@
                     throw TypeError(".pg_query.CTESearchClause: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CTESearchClause();
                 if (object.search_col_list) {
@@ -59093,7 +59094,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -59286,7 +59287,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.cycle_col_list != null && message.cycle_col_list.length)
                     for (var i = 0; i < message.cycle_col_list.length; ++i)
@@ -59341,7 +59342,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -59443,7 +59444,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.cycle_col_list != null && Object.hasOwnProperty.call(message, "cycle_col_list")) {
                     if (!Array.isArray(message.cycle_col_list))
@@ -59503,7 +59504,7 @@
                     throw TypeError(".pg_query.CTECycleClause: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CTECycleClause();
                 if (object.cycle_col_list) {
@@ -59557,7 +59558,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -59799,7 +59800,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.ctename != null && Object.hasOwnProperty.call(message, "ctename"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.ctename);
@@ -59864,7 +59865,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -59986,7 +59987,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.ctename != null && Object.hasOwnProperty.call(message, "ctename"))
                     if (!$util.isString(message.ctename))
@@ -60088,7 +60089,7 @@
                     throw TypeError(".pg_query.CommonTableExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CommonTableExpr();
                 if (object.ctename != null)
@@ -60205,7 +60206,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -60403,7 +60404,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.matchKind != null && Object.hasOwnProperty.call(message, "matchKind"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.matchKind);
@@ -60451,7 +60452,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -60539,7 +60540,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.matchKind != null && Object.hasOwnProperty.call(message, "matchKind"))
                     switch (message.matchKind) {
@@ -60617,7 +60618,7 @@
                     throw TypeError(".pg_query.MergeWhenClause: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.MergeWhenClause();
                 switch (object.matchKind) {
@@ -60754,7 +60755,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -60893,7 +60894,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
@@ -60933,7 +60934,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -61005,7 +61006,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                     if (!$util.isString(message.name))
@@ -61034,7 +61035,7 @@
                     throw TypeError(".pg_query.TriggerTransition: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.TriggerTransition();
                 if (object.name != null)
@@ -61060,7 +61061,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -61173,7 +61174,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.typeName != null && Object.hasOwnProperty.call(message, "typeName"))
                     $root.pg_query.TypeName.encode(message.typeName, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -61211,7 +61212,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -61279,7 +61280,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.typeName != null && Object.hasOwnProperty.call(message, "typeName")) {
                     var error = $root.pg_query.TypeName.verify(message.typeName, long + 1);
@@ -61309,7 +61310,7 @@
                     throw TypeError(".pg_query.JsonOutput: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.JsonOutput();
                 if (object.typeName != null) {
@@ -61339,7 +61340,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -61449,7 +61450,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.val != null && Object.hasOwnProperty.call(message, "val"))
                     $root.pg_query.JsonValueExpr.encode(message.val, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -61487,7 +61488,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -61555,7 +61556,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.val != null && Object.hasOwnProperty.call(message, "val")) {
                     var error = $root.pg_query.JsonValueExpr.verify(message.val, long + 1);
@@ -61583,7 +61584,7 @@
                     throw TypeError(".pg_query.JsonArgument: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.JsonArgument();
                 if (object.val != null) {
@@ -61610,7 +61611,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -61802,7 +61803,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.op != null && Object.hasOwnProperty.call(message, "op"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.op);
@@ -61859,7 +61860,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -61965,7 +61966,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.op != null && Object.hasOwnProperty.call(message, "op"))
                     switch (message.op) {
@@ -62057,7 +62058,7 @@
                     throw TypeError(".pg_query.JsonFuncExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.JsonFuncExpr();
                 switch (object.op) {
@@ -62196,7 +62197,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -62355,7 +62356,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.string != null && Object.hasOwnProperty.call(message, "string"))
                     $root.pg_query.Node.encode(message.string, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -62397,7 +62398,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -62473,7 +62474,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.string != null && Object.hasOwnProperty.call(message, "string")) {
                     var error = $root.pg_query.Node.verify(message.string, long + 1);
@@ -62507,7 +62508,7 @@
                     throw TypeError(".pg_query.JsonTablePathSpec: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.JsonTablePathSpec();
                 if (object.string != null) {
@@ -62538,7 +62539,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -62710,7 +62711,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.context_item != null && Object.hasOwnProperty.call(message, "context_item"))
                     $root.pg_query.JsonValueExpr.encode(message.context_item, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -62762,7 +62763,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -62858,7 +62859,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.context_item != null && Object.hasOwnProperty.call(message, "context_item")) {
                     var error = $root.pg_query.JsonValueExpr.verify(message.context_item, long + 1);
@@ -62922,7 +62923,7 @@
                     throw TypeError(".pg_query.JsonTable: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.JsonTable();
                 if (object.context_item != null) {
@@ -62986,7 +62987,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -63204,7 +63205,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.coltype != null && Object.hasOwnProperty.call(message, "coltype"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.coltype);
@@ -63261,7 +63262,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -63367,7 +63368,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.coltype != null && Object.hasOwnProperty.call(message, "coltype"))
                     switch (message.coltype) {
@@ -63460,7 +63461,7 @@
                     throw TypeError(".pg_query.JsonTableColumn: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.JsonTableColumn();
                 switch (object.coltype) {
@@ -63603,7 +63604,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -63744,7 +63745,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.key != null && Object.hasOwnProperty.call(message, "key"))
                     $root.pg_query.Node.encode(message.key, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -63782,7 +63783,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -63850,7 +63851,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.key != null && Object.hasOwnProperty.call(message, "key")) {
                     var error = $root.pg_query.Node.verify(message.key, long + 1);
@@ -63880,7 +63881,7 @@
                     throw TypeError(".pg_query.JsonKeyValue: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.JsonKeyValue();
                 if (object.key != null) {
@@ -63910,7 +63911,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -64038,7 +64039,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.expr != null && Object.hasOwnProperty.call(message, "expr"))
                     $root.pg_query.JsonValueExpr.encode(message.expr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -64080,7 +64081,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -64156,7 +64157,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.expr != null && Object.hasOwnProperty.call(message, "expr")) {
                     var error = $root.pg_query.JsonValueExpr.verify(message.expr, long + 1);
@@ -64192,7 +64193,7 @@
                     throw TypeError(".pg_query.JsonParseExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.JsonParseExpr();
                 if (object.expr != null) {
@@ -64226,7 +64227,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -64351,7 +64352,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.expr != null && Object.hasOwnProperty.call(message, "expr"))
                     $root.pg_query.Node.encode(message.expr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -64391,7 +64392,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -64463,7 +64464,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.expr != null && Object.hasOwnProperty.call(message, "expr")) {
                     var error = $root.pg_query.Node.verify(message.expr, long + 1);
@@ -64496,7 +64497,7 @@
                     throw TypeError(".pg_query.JsonScalarExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.JsonScalarExpr();
                 if (object.expr != null) {
@@ -64528,7 +64529,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -64650,7 +64651,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.expr != null && Object.hasOwnProperty.call(message, "expr"))
                     $root.pg_query.JsonValueExpr.encode(message.expr, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -64690,7 +64691,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -64762,7 +64763,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.expr != null && Object.hasOwnProperty.call(message, "expr")) {
                     var error = $root.pg_query.JsonValueExpr.verify(message.expr, long + 1);
@@ -64795,7 +64796,7 @@
                     throw TypeError(".pg_query.JsonSerializeExpr: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.JsonSerializeExpr();
                 if (object.expr != null) {
@@ -64827,7 +64828,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -64968,7 +64969,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.exprs != null && message.exprs.length)
                     for (var i = 0; i < message.exprs.length; ++i)
@@ -65013,7 +65014,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -65095,7 +65096,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.exprs != null && Object.hasOwnProperty.call(message, "exprs")) {
                     if (!Array.isArray(message.exprs))
@@ -65138,7 +65139,7 @@
                     throw TypeError(".pg_query.JsonObjectConstructor: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.JsonObjectConstructor();
                 if (object.exprs) {
@@ -65179,7 +65180,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -65321,7 +65322,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.exprs != null && message.exprs.length)
                     for (var i = 0; i < message.exprs.length; ++i)
@@ -65364,7 +65365,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -65442,7 +65443,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.exprs != null && Object.hasOwnProperty.call(message, "exprs")) {
                     if (!Array.isArray(message.exprs))
@@ -65482,7 +65483,7 @@
                     throw TypeError(".pg_query.JsonArrayConstructor: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.JsonArrayConstructor();
                 if (object.exprs) {
@@ -65521,7 +65522,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -65668,7 +65669,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.query != null && Object.hasOwnProperty.call(message, "query"))
                     $root.pg_query.Node.encode(message.query, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -65712,7 +65713,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -65792,7 +65793,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.query != null && Object.hasOwnProperty.call(message, "query")) {
                     var error = $root.pg_query.Node.verify(message.query, long + 1);
@@ -65833,7 +65834,7 @@
                     throw TypeError(".pg_query.JsonArrayQueryConstructor: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.JsonArrayQueryConstructor();
                 if (object.query != null) {
@@ -65872,7 +65873,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -66019,7 +66020,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.output != null && Object.hasOwnProperty.call(message, "output"))
                     $root.pg_query.JsonOutput.encode(message.output, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -66064,7 +66065,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -66146,7 +66147,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.output != null && Object.hasOwnProperty.call(message, "output")) {
                     var error = $root.pg_query.JsonOutput.verify(message.output, long + 1);
@@ -66193,7 +66194,7 @@
                     throw TypeError(".pg_query.JsonAggConstructor: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.JsonAggConstructor();
                 if (object.output != null) {
@@ -66240,7 +66241,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -66381,7 +66382,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.constructor != null && Object.hasOwnProperty.call(message, "constructor"))
                     $root.pg_query.JsonAggConstructor.encode(message.constructor, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -66423,7 +66424,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -66499,7 +66500,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.constructor != null && Object.hasOwnProperty.call(message, "constructor")) {
                     var error = $root.pg_query.JsonAggConstructor.verify(message.constructor, long + 1);
@@ -66535,7 +66536,7 @@
                     throw TypeError(".pg_query.JsonObjectAgg: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.JsonObjectAgg();
                 if (object.constructor != null) {
@@ -66569,7 +66570,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -66694,7 +66695,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.constructor != null && Object.hasOwnProperty.call(message, "constructor"))
                     $root.pg_query.JsonAggConstructor.encode(message.constructor, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -66734,7 +66735,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -66806,7 +66807,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.constructor != null && Object.hasOwnProperty.call(message, "constructor")) {
                     var error = $root.pg_query.JsonAggConstructor.verify(message.constructor, long + 1);
@@ -66839,7 +66840,7 @@
                     throw TypeError(".pg_query.JsonArrayAgg: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.JsonArrayAgg();
                 if (object.constructor != null) {
@@ -66871,7 +66872,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -66993,7 +66994,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.stmt != null && Object.hasOwnProperty.call(message, "stmt"))
                     $root.pg_query.Node.encode(message.stmt, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -67033,7 +67034,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -67105,7 +67106,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.stmt != null && Object.hasOwnProperty.call(message, "stmt")) {
                     var error = $root.pg_query.Node.verify(message.stmt, long + 1);
@@ -67136,7 +67137,7 @@
                     throw TypeError(".pg_query.RawStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.RawStmt();
                 if (object.stmt != null) {
@@ -67165,7 +67166,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -67325,7 +67326,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.relation != null && Object.hasOwnProperty.call(message, "relation"))
                     $root.pg_query.RangeVar.encode(message.relation, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -67375,7 +67376,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -67467,7 +67468,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.relation != null && Object.hasOwnProperty.call(message, "relation")) {
                     var error = $root.pg_query.RangeVar.verify(message.relation, long + 1);
@@ -67535,7 +67536,7 @@
                     throw TypeError(".pg_query.InsertStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.InsertStmt();
                 if (object.relation != null) {
@@ -67619,7 +67620,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -67781,7 +67782,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.relation != null && Object.hasOwnProperty.call(message, "relation"))
                     $root.pg_query.RangeVar.encode(message.relation, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -67827,7 +67828,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -67911,7 +67912,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.relation != null && Object.hasOwnProperty.call(message, "relation")) {
                     var error = $root.pg_query.RangeVar.verify(message.relation, long + 1);
@@ -67964,7 +67965,7 @@
                     throw TypeError(".pg_query.DeleteStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.DeleteStmt();
                 if (object.relation != null) {
@@ -68019,7 +68020,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -68185,7 +68186,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.relation != null && Object.hasOwnProperty.call(message, "relation"))
                     $root.pg_query.RangeVar.encode(message.relation, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -68234,7 +68235,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -68324,7 +68325,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.relation != null && Object.hasOwnProperty.call(message, "relation")) {
                     var error = $root.pg_query.RangeVar.verify(message.relation, long + 1);
@@ -68386,7 +68387,7 @@
                     throw TypeError(".pg_query.UpdateStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.UpdateStmt();
                 if (object.relation != null) {
@@ -68451,7 +68452,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -68622,7 +68623,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.relation != null && Object.hasOwnProperty.call(message, "relation"))
                     $root.pg_query.RangeVar.encode(message.relation, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -68670,7 +68671,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -68758,7 +68759,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.relation != null && Object.hasOwnProperty.call(message, "relation")) {
                     var error = $root.pg_query.RangeVar.verify(message.relation, long + 1);
@@ -68816,7 +68817,7 @@
                     throw TypeError(".pg_query.MergeStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.MergeStmt();
                 if (object.relation != null) {
@@ -68876,7 +68877,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -69176,7 +69177,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.distinctClause != null && message.distinctClause.length)
                     for (var i = 0; i < message.distinctClause.length; ++i)
@@ -69258,7 +69259,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -69414,7 +69415,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.distinctClause != null && Object.hasOwnProperty.call(message, "distinctClause")) {
                     if (!Array.isArray(message.distinctClause))
@@ -69573,7 +69574,7 @@
                     throw TypeError(".pg_query.SelectStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.SelectStmt();
                 if (object.distinctClause) {
@@ -69769,7 +69770,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -70017,7 +70018,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.op != null && Object.hasOwnProperty.call(message, "op"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.op);
@@ -70071,7 +70072,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -70171,7 +70172,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.op != null && Object.hasOwnProperty.call(message, "op"))
                     switch (message.op) {
@@ -70251,7 +70252,7 @@
                     throw TypeError(".pg_query.SetOperationStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.SetOperationStmt();
                 switch (object.op) {
@@ -70351,7 +70352,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -70484,7 +70485,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.returnval != null && Object.hasOwnProperty.call(message, "returnval"))
                     $root.pg_query.Node.encode(message.returnval, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -70520,7 +70521,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -70584,7 +70585,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.returnval != null && Object.hasOwnProperty.call(message, "returnval")) {
                     var error = $root.pg_query.Node.verify(message.returnval, long + 1);
@@ -70609,7 +70610,7 @@
                     throw TypeError(".pg_query.ReturnStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.ReturnStmt();
                 if (object.returnval != null) {
@@ -70634,7 +70635,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults)
@@ -70768,7 +70769,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
@@ -70813,7 +70814,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -70895,7 +70896,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                     if (!$util.isString(message.name))
@@ -70938,7 +70939,7 @@
                     throw TypeError(".pg_query.PLAssignStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.PLAssignStmt();
                 if (object.name != null)
@@ -70979,7 +70980,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -71121,7 +71122,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.schemaname != null && Object.hasOwnProperty.call(message, "schemaname"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.schemaname);
@@ -71164,7 +71165,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -71242,7 +71243,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.schemaname != null && Object.hasOwnProperty.call(message, "schemaname"))
                     if (!$util.isString(message.schemaname))
@@ -71282,7 +71283,7 @@
                     throw TypeError(".pg_query.CreateSchemaStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreateSchemaStmt();
                 if (object.schemaname != null)
@@ -71321,7 +71322,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -71460,7 +71461,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.relation != null && Object.hasOwnProperty.call(message, "relation"))
                     $root.pg_query.RangeVar.encode(message.relation, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -71503,7 +71504,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -71581,7 +71582,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.relation != null && Object.hasOwnProperty.call(message, "relation")) {
                     var error = $root.pg_query.RangeVar.verify(message.relation, long + 1);
@@ -71677,7 +71678,7 @@
                     throw TypeError(".pg_query.AlterTableStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterTableStmt();
                 if (object.relation != null) {
@@ -71934,7 +71935,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -72054,7 +72055,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.identity_type != null && Object.hasOwnProperty.call(message, "identity_type"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.identity_type);
@@ -72092,7 +72093,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -72160,7 +72161,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.identity_type != null && Object.hasOwnProperty.call(message, "identity_type"))
                     if (!$util.isString(message.identity_type))
@@ -72186,7 +72187,7 @@
                     throw TypeError(".pg_query.ReplicaIdentityStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.ReplicaIdentityStmt();
                 if (object.identity_type != null)
@@ -72210,7 +72211,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -72374,7 +72375,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.subtype != null && Object.hasOwnProperty.call(message, "subtype"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.subtype);
@@ -72424,7 +72425,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -72516,7 +72517,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.subtype != null && Object.hasOwnProperty.call(message, "subtype"))
                     switch (message.subtype) {
@@ -72641,7 +72642,7 @@
                     throw TypeError(".pg_query.AlterTableCmd: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterTableCmd();
                 switch (object.subtype) {
@@ -72979,7 +72980,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -73099,7 +73100,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.collname != null && message.collname.length)
                     for (var i = 0; i < message.collname.length; ++i)
@@ -73136,7 +73137,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -73202,7 +73203,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.collname != null && Object.hasOwnProperty.call(message, "collname")) {
                     if (!Array.isArray(message.collname))
@@ -73231,7 +73232,7 @@
                     throw TypeError(".pg_query.AlterCollationStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterCollationStmt();
                 if (object.collname) {
@@ -73261,7 +73262,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -73407,7 +73408,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.subtype != null && Object.hasOwnProperty.call(message, "subtype"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.subtype);
@@ -73454,7 +73455,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -73540,7 +73541,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.subtype != null && Object.hasOwnProperty.call(message, "subtype"))
                     if (!$util.isString(message.subtype))
@@ -73592,7 +73593,7 @@
                     throw TypeError(".pg_query.AlterDomainStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterDomainStmt();
                 if (object.subtype != null)
@@ -73653,7 +73654,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -73845,7 +73846,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.is_grant != null && Object.hasOwnProperty.call(message, "is_grant"))
                     writer.uint32(/* id 1, wireType 0 =*/8).bool(message.is_grant);
@@ -73900,7 +73901,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -74002,7 +74003,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.is_grant != null && Object.hasOwnProperty.call(message, "is_grant"))
                     if (typeof message.is_grant !== "boolean")
@@ -74138,7 +74139,7 @@
                     throw TypeError(".pg_query.GrantStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.GrantStmt();
                 if (object.is_grant != null)
@@ -74461,7 +74462,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -74624,7 +74625,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.objname != null && message.objname.length)
                     for (var i = 0; i < message.objname.length; ++i)
@@ -74669,7 +74670,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -74751,7 +74752,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.objname != null && Object.hasOwnProperty.call(message, "objname")) {
                     if (!Array.isArray(message.objname))
@@ -74801,7 +74802,7 @@
                     throw TypeError(".pg_query.ObjectWithArgs: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.ObjectWithArgs();
                 if (object.objname) {
@@ -74853,7 +74854,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -74980,7 +74981,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.priv_name != null && Object.hasOwnProperty.call(message, "priv_name"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.priv_name);
@@ -75019,7 +75020,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -75089,7 +75090,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.priv_name != null && Object.hasOwnProperty.call(message, "priv_name"))
                     if (!$util.isString(message.priv_name))
@@ -75121,7 +75122,7 @@
                     throw TypeError(".pg_query.AccessPriv: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AccessPriv();
                 if (object.priv_name != null)
@@ -75153,7 +75154,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -75305,7 +75306,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.granted_roles != null && message.granted_roles.length)
                     for (var i = 0; i < message.granted_roles.length; ++i)
@@ -75354,7 +75355,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -75444,7 +75445,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.granted_roles != null && Object.hasOwnProperty.call(message, "granted_roles")) {
                     if (!Array.isArray(message.granted_roles))
@@ -75508,7 +75509,7 @@
                     throw TypeError(".pg_query.GrantRoleStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.GrantRoleStmt();
                 if (object.granted_roles) {
@@ -75585,7 +75586,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -75719,7 +75720,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.options != null && message.options.length)
                     for (var i = 0; i < message.options.length; ++i)
@@ -75758,7 +75759,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -75828,7 +75829,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.options != null && Object.hasOwnProperty.call(message, "options")) {
                     if (!Array.isArray(message.options))
@@ -75862,7 +75863,7 @@
                     throw TypeError(".pg_query.AlterDefaultPrivilegesStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterDefaultPrivilegesStmt();
                 if (object.options) {
@@ -75897,7 +75898,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -76066,7 +76067,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.relation != null && Object.hasOwnProperty.call(message, "relation"))
                     $root.pg_query.RangeVar.encode(message.relation, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -76118,7 +76119,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -76214,7 +76215,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.relation != null && Object.hasOwnProperty.call(message, "relation")) {
                     var error = $root.pg_query.RangeVar.verify(message.relation, long + 1);
@@ -76276,7 +76277,7 @@
                     throw TypeError(".pg_query.CopyStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CopyStmt();
                 if (object.relation != null) {
@@ -76337,7 +76338,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -76492,7 +76493,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.kind != null && Object.hasOwnProperty.call(message, "kind"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.kind);
@@ -76535,7 +76536,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -76613,7 +76614,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.kind != null && Object.hasOwnProperty.call(message, "kind"))
                     switch (message.kind) {
@@ -76661,7 +76662,7 @@
                     throw TypeError(".pg_query.VariableSetStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.VariableSetStmt();
                 switch (object.kind) {
@@ -76731,7 +76732,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -76842,7 +76843,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
@@ -76878,7 +76879,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -76942,7 +76943,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                     if (!$util.isString(message.name))
@@ -76965,7 +76966,7 @@
                     throw TypeError(".pg_query.VariableShowStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.VariableShowStmt();
                 if (object.name != null)
@@ -76987,7 +76988,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults)
@@ -77187,7 +77188,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.relation != null && Object.hasOwnProperty.call(message, "relation"))
                     $root.pg_query.RangeVar.encode(message.relation, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -77249,7 +77250,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -77365,7 +77366,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.relation != null && Object.hasOwnProperty.call(message, "relation")) {
                     var error = $root.pg_query.RangeVar.verify(message.relation, long + 1);
@@ -77461,7 +77462,7 @@
                     throw TypeError(".pg_query.CreateStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreateStmt();
                 if (object.relation != null) {
@@ -77575,7 +77576,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -77998,7 +77999,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.contype != null && Object.hasOwnProperty.call(message, "contype"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.contype);
@@ -78102,7 +78103,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -78302,7 +78303,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.contype != null && Object.hasOwnProperty.call(message, "contype"))
                     switch (message.contype) {
@@ -78487,7 +78488,7 @@
                     throw TypeError(".pg_query.Constraint: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.Constraint();
                 switch (object.contype) {
@@ -78708,7 +78709,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -78950,7 +78951,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.tablespacename != null && Object.hasOwnProperty.call(message, "tablespacename"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.tablespacename);
@@ -78993,7 +78994,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -79071,7 +79072,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.tablespacename != null && Object.hasOwnProperty.call(message, "tablespacename"))
                     if (!$util.isString(message.tablespacename))
@@ -79111,7 +79112,7 @@
                     throw TypeError(".pg_query.CreateTableSpaceStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreateTableSpaceStmt();
                 if (object.tablespacename != null)
@@ -79150,7 +79151,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -79270,7 +79271,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.tablespacename != null && Object.hasOwnProperty.call(message, "tablespacename"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.tablespacename);
@@ -79308,7 +79309,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -79376,7 +79377,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.tablespacename != null && Object.hasOwnProperty.call(message, "tablespacename"))
                     if (!$util.isString(message.tablespacename))
@@ -79402,7 +79403,7 @@
                     throw TypeError(".pg_query.DropTableSpaceStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.DropTableSpaceStmt();
                 if (object.tablespacename != null)
@@ -79426,7 +79427,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -79546,7 +79547,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.tablespacename != null && Object.hasOwnProperty.call(message, "tablespacename"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.tablespacename);
@@ -79587,7 +79588,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -79661,7 +79662,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.tablespacename != null && Object.hasOwnProperty.call(message, "tablespacename"))
                     if (!$util.isString(message.tablespacename))
@@ -79696,7 +79697,7 @@
                     throw TypeError(".pg_query.AlterTableSpaceOptionsStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterTableSpaceOptionsStmt();
                 if (object.tablespacename != null)
@@ -79730,7 +79731,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -79875,7 +79876,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.orig_tablespacename != null && Object.hasOwnProperty.call(message, "orig_tablespacename"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.orig_tablespacename);
@@ -79920,7 +79921,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -80002,7 +80003,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.orig_tablespacename != null && Object.hasOwnProperty.call(message, "orig_tablespacename"))
                     if (!$util.isString(message.orig_tablespacename))
@@ -80099,7 +80100,7 @@
                     throw TypeError(".pg_query.AlterTableMoveAllStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterTableMoveAllStmt();
                 if (object.orig_tablespacename != null)
@@ -80355,7 +80356,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -80488,7 +80489,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.extname != null && Object.hasOwnProperty.call(message, "extname"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.extname);
@@ -80529,7 +80530,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -80603,7 +80604,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.extname != null && Object.hasOwnProperty.call(message, "extname"))
                     if (!$util.isString(message.extname))
@@ -80638,7 +80639,7 @@
                     throw TypeError(".pg_query.CreateExtensionStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreateExtensionStmt();
                 if (object.extname != null)
@@ -80672,7 +80673,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -80790,7 +80791,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.extname != null && Object.hasOwnProperty.call(message, "extname"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.extname);
@@ -80829,7 +80830,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -80899,7 +80900,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.extname != null && Object.hasOwnProperty.call(message, "extname"))
                     if (!$util.isString(message.extname))
@@ -80931,7 +80932,7 @@
                     throw TypeError(".pg_query.AlterExtensionStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterExtensionStmt();
                 if (object.extname != null)
@@ -80963,7 +80964,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -81094,7 +81095,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.extname != null && Object.hasOwnProperty.call(message, "extname"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.extname);
@@ -81136,7 +81137,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -81212,7 +81213,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.extname != null && Object.hasOwnProperty.call(message, "extname"))
                     if (!$util.isString(message.extname))
@@ -81302,7 +81303,7 @@
                     throw TypeError(".pg_query.AlterExtensionContentsStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterExtensionContentsStmt();
                 if (object.extname != null)
@@ -81551,7 +81552,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -81678,7 +81679,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.fdwname != null && Object.hasOwnProperty.call(message, "fdwname"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.fdwname);
@@ -81720,7 +81721,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -81796,7 +81797,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.fdwname != null && Object.hasOwnProperty.call(message, "fdwname"))
                     if (!$util.isString(message.fdwname))
@@ -81837,7 +81838,7 @@
                     throw TypeError(".pg_query.CreateFdwStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreateFdwStmt();
                 if (object.fdwname != null)
@@ -81879,7 +81880,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -82010,7 +82011,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.fdwname != null && Object.hasOwnProperty.call(message, "fdwname"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.fdwname);
@@ -82052,7 +82053,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -82128,7 +82129,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.fdwname != null && Object.hasOwnProperty.call(message, "fdwname"))
                     if (!$util.isString(message.fdwname))
@@ -82169,7 +82170,7 @@
                     throw TypeError(".pg_query.AlterFdwStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterFdwStmt();
                 if (object.fdwname != null)
@@ -82211,7 +82212,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -82368,7 +82369,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.servername != null && Object.hasOwnProperty.call(message, "servername"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.servername);
@@ -82415,7 +82416,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -82501,7 +82502,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.servername != null && Object.hasOwnProperty.call(message, "servername"))
                     if (!$util.isString(message.servername))
@@ -82545,7 +82546,7 @@
                     throw TypeError(".pg_query.CreateForeignServerStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreateForeignServerStmt();
                 if (object.servername != null)
@@ -82585,7 +82586,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -82730,7 +82731,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.servername != null && Object.hasOwnProperty.call(message, "servername"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.servername);
@@ -82773,7 +82774,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -82851,7 +82852,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.servername != null && Object.hasOwnProperty.call(message, "servername"))
                     if (!$util.isString(message.servername))
@@ -82889,7 +82890,7 @@
                     throw TypeError(".pg_query.AlterForeignServerStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterForeignServerStmt();
                 if (object.servername != null)
@@ -82925,7 +82926,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -83055,7 +83056,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.base != null && Object.hasOwnProperty.call(message, "base"))
                     $root.pg_query.CreateStmt.encode(message.base, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -83096,7 +83097,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -83170,7 +83171,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.base != null && Object.hasOwnProperty.call(message, "base")) {
                     var error = $root.pg_query.CreateStmt.verify(message.base, long + 1);
@@ -83207,7 +83208,7 @@
                     throw TypeError(".pg_query.CreateForeignTableStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreateForeignTableStmt();
                 if (object.base != null) {
@@ -83244,7 +83245,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -83380,7 +83381,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.user != null && Object.hasOwnProperty.call(message, "user"))
                     $root.pg_query.RoleSpec.encode(message.user, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -83423,7 +83424,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -83501,7 +83502,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.user != null && Object.hasOwnProperty.call(message, "user")) {
                     var error = $root.pg_query.RoleSpec.verify(message.user, long + 1);
@@ -83541,7 +83542,7 @@
                     throw TypeError(".pg_query.CreateUserMappingStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreateUserMappingStmt();
                 if (object.user != null) {
@@ -83580,7 +83581,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -83710,7 +83711,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.user != null && Object.hasOwnProperty.call(message, "user"))
                     $root.pg_query.RoleSpec.encode(message.user, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -83751,7 +83752,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -83825,7 +83826,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.user != null && Object.hasOwnProperty.call(message, "user")) {
                     var error = $root.pg_query.RoleSpec.verify(message.user, long + 1);
@@ -83862,7 +83863,7 @@
                     throw TypeError(".pg_query.AlterUserMappingStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterUserMappingStmt();
                 if (object.user != null) {
@@ -83899,7 +83900,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -84025,7 +84026,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.user != null && Object.hasOwnProperty.call(message, "user"))
                     $root.pg_query.RoleSpec.encode(message.user, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -84065,7 +84066,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -84137,7 +84138,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.user != null && Object.hasOwnProperty.call(message, "user")) {
                     var error = $root.pg_query.RoleSpec.verify(message.user, long + 1);
@@ -84168,7 +84169,7 @@
                     throw TypeError(".pg_query.DropUserMappingStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.DropUserMappingStmt();
                 if (object.user != null) {
@@ -84197,7 +84198,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -84348,7 +84349,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.server_name != null && Object.hasOwnProperty.call(message, "server_name"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.server_name);
@@ -84396,7 +84397,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -84484,7 +84485,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.server_name != null && Object.hasOwnProperty.call(message, "server_name"))
                     if (!$util.isString(message.server_name))
@@ -84541,7 +84542,7 @@
                     throw TypeError(".pg_query.ImportForeignSchemaStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.ImportForeignSchemaStmt();
                 if (object.server_name != null)
@@ -84611,7 +84612,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -84787,7 +84788,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.policy_name != null && Object.hasOwnProperty.call(message, "policy_name"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.policy_name);
@@ -84836,7 +84837,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -84926,7 +84927,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.policy_name != null && Object.hasOwnProperty.call(message, "policy_name"))
                     if (!$util.isString(message.policy_name))
@@ -84979,7 +84980,7 @@
                     throw TypeError(".pg_query.CreatePolicyStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreatePolicyStmt();
                 if (object.policy_name != null)
@@ -85030,7 +85031,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -85187,7 +85188,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.policy_name != null && Object.hasOwnProperty.call(message, "policy_name"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.policy_name);
@@ -85232,7 +85233,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -85314,7 +85315,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.policy_name != null && Object.hasOwnProperty.call(message, "policy_name"))
                     if (!$util.isString(message.policy_name))
@@ -85361,7 +85362,7 @@
                     throw TypeError(".pg_query.AlterPolicyStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterPolicyStmt();
                 if (object.policy_name != null)
@@ -85408,7 +85409,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -85541,7 +85542,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.amname != null && Object.hasOwnProperty.call(message, "amname"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.amname);
@@ -85582,7 +85583,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -85656,7 +85657,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.amname != null && Object.hasOwnProperty.call(message, "amname"))
                     if (!$util.isString(message.amname))
@@ -85691,7 +85692,7 @@
                     throw TypeError(".pg_query.CreateAmStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreateAmStmt();
                 if (object.amname != null)
@@ -85725,7 +85726,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -85963,7 +85964,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.replace != null && Object.hasOwnProperty.call(message, "replace"))
                     writer.uint32(/* id 1, wireType 0 =*/8).bool(message.replace);
@@ -86031,7 +86032,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -86159,7 +86160,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.replace != null && Object.hasOwnProperty.call(message, "replace"))
                     if (typeof message.replace !== "boolean")
@@ -86254,7 +86255,7 @@
                     throw TypeError(".pg_query.CreateTrigStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreateTrigStmt();
                 if (object.replace != null)
@@ -86345,7 +86346,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -86528,7 +86529,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.trigname != null && Object.hasOwnProperty.call(message, "trigname"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.trigname);
@@ -86572,7 +86573,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -86652,7 +86653,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.trigname != null && Object.hasOwnProperty.call(message, "trigname"))
                     if (!$util.isString(message.trigname))
@@ -86696,7 +86697,7 @@
                     throw TypeError(".pg_query.CreateEventTrigStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreateEventTrigStmt();
                 if (object.trigname != null)
@@ -86740,7 +86741,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -86864,7 +86865,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.trigname != null && Object.hasOwnProperty.call(message, "trigname"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.trigname);
@@ -86902,7 +86903,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -86970,7 +86971,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.trigname != null && Object.hasOwnProperty.call(message, "trigname"))
                     if (!$util.isString(message.trigname))
@@ -86996,7 +86997,7 @@
                     throw TypeError(".pg_query.AlterEventTrigStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterEventTrigStmt();
                 if (object.trigname != null)
@@ -87020,7 +87021,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -87169,7 +87170,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.replace != null && Object.hasOwnProperty.call(message, "replace"))
                     writer.uint32(/* id 1, wireType 0 =*/8).bool(message.replace);
@@ -87218,7 +87219,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -87308,7 +87309,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.replace != null && Object.hasOwnProperty.call(message, "replace"))
                     if (typeof message.replace !== "boolean")
@@ -87364,7 +87365,7 @@
                     throw TypeError(".pg_query.CreatePLangStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreatePLangStmt();
                 if (object.replace != null)
@@ -87420,7 +87421,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -87563,7 +87564,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.stmt_type != null && Object.hasOwnProperty.call(message, "stmt_type"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.stmt_type);
@@ -87604,7 +87605,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -87678,7 +87679,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.stmt_type != null && Object.hasOwnProperty.call(message, "stmt_type"))
                     switch (message.stmt_type) {
@@ -87720,7 +87721,7 @@
                     throw TypeError(".pg_query.CreateRoleStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreateRoleStmt();
                 switch (object.stmt_type) {
@@ -87776,7 +87777,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -87903,7 +87904,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.role != null && Object.hasOwnProperty.call(message, "role"))
                     $root.pg_query.RoleSpec.encode(message.role, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -87944,7 +87945,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -88018,7 +88019,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.role != null && Object.hasOwnProperty.call(message, "role")) {
                     var error = $root.pg_query.RoleSpec.verify(message.role, long + 1);
@@ -88055,7 +88056,7 @@
                     throw TypeError(".pg_query.AlterRoleStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterRoleStmt();
                 if (object.role != null) {
@@ -88092,7 +88093,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -88218,7 +88219,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.role != null && Object.hasOwnProperty.call(message, "role"))
                     $root.pg_query.RoleSpec.encode(message.role, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -88258,7 +88259,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -88330,7 +88331,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.role != null && Object.hasOwnProperty.call(message, "role")) {
                     var error = $root.pg_query.RoleSpec.verify(message.role, long + 1);
@@ -88363,7 +88364,7 @@
                     throw TypeError(".pg_query.AlterRoleSetStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterRoleSetStmt();
                 if (object.role != null) {
@@ -88395,7 +88396,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -88509,7 +88510,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.roles != null && message.roles.length)
                     for (var i = 0; i < message.roles.length; ++i)
@@ -88548,7 +88549,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -88618,7 +88619,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.roles != null && Object.hasOwnProperty.call(message, "roles")) {
                     if (!Array.isArray(message.roles))
@@ -88650,7 +88651,7 @@
                     throw TypeError(".pg_query.DropRoleStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.DropRoleStmt();
                 if (object.roles) {
@@ -88682,7 +88683,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -88823,7 +88824,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.sequence != null && Object.hasOwnProperty.call(message, "sequence"))
                     $root.pg_query.RangeVar.encode(message.sequence, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -88868,7 +88869,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -88950,7 +88951,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.sequence != null && Object.hasOwnProperty.call(message, "sequence")) {
                     var error = $root.pg_query.RangeVar.verify(message.sequence, long + 1);
@@ -88993,7 +88994,7 @@
                     throw TypeError(".pg_query.CreateSeqStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreateSeqStmt();
                 if (object.sequence != null) {
@@ -89034,7 +89035,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -89176,7 +89177,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.sequence != null && Object.hasOwnProperty.call(message, "sequence"))
                     $root.pg_query.RangeVar.encode(message.sequence, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -89219,7 +89220,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -89297,7 +89298,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.sequence != null && Object.hasOwnProperty.call(message, "sequence")) {
                     var error = $root.pg_query.RangeVar.verify(message.sequence, long + 1);
@@ -89337,7 +89338,7 @@
                     throw TypeError(".pg_query.AlterSeqStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterSeqStmt();
                 if (object.sequence != null) {
@@ -89376,7 +89377,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -89544,7 +89545,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.kind != null && Object.hasOwnProperty.call(message, "kind"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.kind);
@@ -89595,7 +89596,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -89689,7 +89690,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.kind != null && Object.hasOwnProperty.call(message, "kind"))
                     switch (message.kind) {
@@ -89804,7 +89805,7 @@
                     throw TypeError(".pg_query.DefineStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.DefineStmt();
                 switch (object.kind) {
@@ -90080,7 +90081,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -90236,7 +90237,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.domainname != null && message.domainname.length)
                     for (var i = 0; i < message.domainname.length; ++i)
@@ -90280,7 +90281,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -90360,7 +90361,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.domainname != null && Object.hasOwnProperty.call(message, "domainname")) {
                     if (!Array.isArray(message.domainname))
@@ -90408,7 +90409,7 @@
                     throw TypeError(".pg_query.CreateDomainStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreateDomainStmt();
                 if (object.domainname) {
@@ -90458,7 +90459,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -90621,7 +90622,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.opclassname != null && message.opclassname.length)
                     for (var i = 0; i < message.opclassname.length; ++i)
@@ -90670,7 +90671,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -90760,7 +90761,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.opclassname != null && Object.hasOwnProperty.call(message, "opclassname")) {
                     if (!Array.isArray(message.opclassname))
@@ -90818,7 +90819,7 @@
                     throw TypeError(".pg_query.CreateOpClassStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreateOpClassStmt();
                 if (object.opclassname) {
@@ -90877,7 +90878,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -91048,7 +91049,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.itemtype != null && Object.hasOwnProperty.call(message, "itemtype"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.itemtype);
@@ -91096,7 +91097,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -91184,7 +91185,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.itemtype != null && Object.hasOwnProperty.call(message, "itemtype"))
                     if (!$util.isInteger(message.itemtype))
@@ -91238,7 +91239,7 @@
                     throw TypeError(".pg_query.CreateOpClassItem: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreateOpClassItem();
                 if (object.itemtype != null)
@@ -91292,7 +91293,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -91423,7 +91424,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.opfamilyname != null && message.opfamilyname.length)
                     for (var i = 0; i < message.opfamilyname.length; ++i)
@@ -91462,7 +91463,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -91532,7 +91533,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.opfamilyname != null && Object.hasOwnProperty.call(message, "opfamilyname")) {
                     if (!Array.isArray(message.opfamilyname))
@@ -91564,7 +91565,7 @@
                     throw TypeError(".pg_query.CreateOpFamilyStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreateOpFamilyStmt();
                 if (object.opfamilyname) {
@@ -91596,7 +91597,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -91729,7 +91730,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.opfamilyname != null && message.opfamilyname.length)
                     for (var i = 0; i < message.opfamilyname.length; ++i)
@@ -91773,7 +91774,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -91853,7 +91854,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.opfamilyname != null && Object.hasOwnProperty.call(message, "opfamilyname")) {
                     if (!Array.isArray(message.opfamilyname))
@@ -91897,7 +91898,7 @@
                     throw TypeError(".pg_query.AlterOpFamilyStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterOpFamilyStmt();
                 if (object.opfamilyname) {
@@ -91941,7 +91942,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -92093,7 +92094,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.objects != null && message.objects.length)
                     for (var i = 0; i < message.objects.length; ++i)
@@ -92138,7 +92139,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -92220,7 +92221,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.objects != null && Object.hasOwnProperty.call(message, "objects")) {
                     if (!Array.isArray(message.objects))
@@ -92323,7 +92324,7 @@
                     throw TypeError(".pg_query.DropStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.DropStmt();
                 if (object.objects) {
@@ -92597,7 +92598,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -92730,7 +92731,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.relations != null && message.relations.length)
                     for (var i = 0; i < message.relations.length; ++i)
@@ -92771,7 +92772,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -92845,7 +92846,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.relations != null && Object.hasOwnProperty.call(message, "relations")) {
                     if (!Array.isArray(message.relations))
@@ -92886,7 +92887,7 @@
                     throw TypeError(".pg_query.TruncateStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.TruncateStmt();
                 if (object.relations) {
@@ -92938,7 +92939,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -93064,7 +93065,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.objtype != null && Object.hasOwnProperty.call(message, "objtype"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.objtype);
@@ -93104,7 +93105,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -93176,7 +93177,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.objtype != null && Object.hasOwnProperty.call(message, "objtype"))
                     switch (message.objtype) {
@@ -93263,7 +93264,7 @@
                     throw TypeError(".pg_query.CommentStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CommentStmt();
                 switch (object.objtype) {
@@ -93510,7 +93511,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -93641,7 +93642,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.objtype != null && Object.hasOwnProperty.call(message, "objtype"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.objtype);
@@ -93683,7 +93684,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -93759,7 +93760,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.objtype != null && Object.hasOwnProperty.call(message, "objtype"))
                     switch (message.objtype) {
@@ -93849,7 +93850,7 @@
                     throw TypeError(".pg_query.SecLabelStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.SecLabelStmt();
                 switch (object.objtype) {
@@ -94098,7 +94099,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -94223,7 +94224,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.portalname != null && Object.hasOwnProperty.call(message, "portalname"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.portalname);
@@ -94263,7 +94264,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -94335,7 +94336,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.portalname != null && Object.hasOwnProperty.call(message, "portalname"))
                     if (!$util.isString(message.portalname))
@@ -94366,7 +94367,7 @@
                     throw TypeError(".pg_query.DeclareCursorStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.DeclareCursorStmt();
                 if (object.portalname != null)
@@ -94395,7 +94396,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -94499,7 +94500,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.portalname != null && Object.hasOwnProperty.call(message, "portalname"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.portalname);
@@ -94535,7 +94536,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -94599,7 +94600,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.portalname != null && Object.hasOwnProperty.call(message, "portalname"))
                     if (!$util.isString(message.portalname))
@@ -94622,7 +94623,7 @@
                     throw TypeError(".pg_query.ClosePortalStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.ClosePortalStmt();
                 if (object.portalname != null)
@@ -94644,7 +94645,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults)
@@ -94768,7 +94769,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.direction != null && Object.hasOwnProperty.call(message, "direction"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.direction);
@@ -94810,7 +94811,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -94886,7 +94887,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.direction != null && Object.hasOwnProperty.call(message, "direction"))
                     switch (message.direction) {
@@ -94926,7 +94927,7 @@
                     throw TypeError(".pg_query.FetchStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.FetchStmt();
                 switch (object.direction) {
@@ -94987,7 +94988,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -95314,7 +95315,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.idxname != null && Object.hasOwnProperty.call(message, "idxname"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.idxname);
@@ -95400,7 +95401,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -95564,7 +95565,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.idxname != null && Object.hasOwnProperty.call(message, "idxname"))
                     if (!$util.isString(message.idxname))
@@ -95684,7 +95685,7 @@
                     throw TypeError(".pg_query.IndexStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.IndexStmt();
                 if (object.idxname != null)
@@ -95790,7 +95791,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -96029,7 +96030,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.defnames != null && message.defnames.length)
                     for (var i = 0; i < message.defnames.length; ++i)
@@ -96081,7 +96082,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -96177,7 +96178,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.defnames != null && Object.hasOwnProperty.call(message, "defnames")) {
                     if (!Array.isArray(message.defnames))
@@ -96242,7 +96243,7 @@
                     throw TypeError(".pg_query.CreateStatsStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreateStatsStmt();
                 if (object.defnames) {
@@ -96308,7 +96309,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -96447,7 +96448,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
@@ -96485,7 +96486,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -96553,7 +96554,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                     if (!$util.isString(message.name))
@@ -96581,7 +96582,7 @@
                     throw TypeError(".pg_query.StatsElem: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.StatsElem();
                 if (object.name != null)
@@ -96608,7 +96609,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -96728,7 +96729,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.defnames != null && message.defnames.length)
                     for (var i = 0; i < message.defnames.length; ++i)
@@ -96769,7 +96770,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -96843,7 +96844,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.defnames != null && Object.hasOwnProperty.call(message, "defnames")) {
                     if (!Array.isArray(message.defnames))
@@ -96880,7 +96881,7 @@
                     throw TypeError(".pg_query.AlterStatsStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterStatsStmt();
                 if (object.defnames) {
@@ -96917,7 +96918,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -97082,7 +97083,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.is_procedure != null && Object.hasOwnProperty.call(message, "is_procedure"))
                     writer.uint32(/* id 1, wireType 0 =*/8).bool(message.is_procedure);
@@ -97133,7 +97134,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -97227,7 +97228,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.is_procedure != null && Object.hasOwnProperty.call(message, "is_procedure"))
                     if (typeof message.is_procedure !== "boolean")
@@ -97290,7 +97291,7 @@
                     throw TypeError(".pg_query.CreateFunctionStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreateFunctionStmt();
                 if (object.is_procedure != null)
@@ -97354,7 +97355,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -97508,7 +97509,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
@@ -97550,7 +97551,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -97626,7 +97627,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                     if (!$util.isString(message.name))
@@ -97672,7 +97673,7 @@
                     throw TypeError(".pg_query.FunctionParameter: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.FunctionParameter();
                 if (object.name != null)
@@ -97740,7 +97741,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -97866,7 +97867,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.objtype != null && Object.hasOwnProperty.call(message, "objtype"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.objtype);
@@ -97907,7 +97908,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -97981,7 +97982,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.objtype != null && Object.hasOwnProperty.call(message, "objtype"))
                     switch (message.objtype) {
@@ -98074,7 +98075,7 @@
                     throw TypeError(".pg_query.AlterFunctionStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterFunctionStmt();
                 switch (object.objtype) {
@@ -98329,7 +98330,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -98438,7 +98439,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.args != null && message.args.length)
                     for (var i = 0; i < message.args.length; ++i)
@@ -98475,7 +98476,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -98541,7 +98542,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.args != null && Object.hasOwnProperty.call(message, "args")) {
                     if (!Array.isArray(message.args))
@@ -98570,7 +98571,7 @@
                     throw TypeError(".pg_query.DoStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.DoStmt();
                 if (object.args) {
@@ -98600,7 +98601,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -98727,7 +98728,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.source_text != null && Object.hasOwnProperty.call(message, "source_text"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.source_text);
@@ -98769,7 +98770,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -98845,7 +98846,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.source_text != null && Object.hasOwnProperty.call(message, "source_text"))
                     if (!$util.isString(message.source_text))
@@ -98877,7 +98878,7 @@
                     throw TypeError(".pg_query.InlineCodeBlock: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.InlineCodeBlock();
                 if (object.source_text != null)
@@ -98905,7 +98906,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -99031,7 +99032,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.funccall != null && Object.hasOwnProperty.call(message, "funccall"))
                     $root.pg_query.FuncCall.encode(message.funccall, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -99072,7 +99073,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -99146,7 +99147,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.funccall != null && Object.hasOwnProperty.call(message, "funccall")) {
                     var error = $root.pg_query.FuncCall.verify(message.funccall, long + 1);
@@ -99185,7 +99186,7 @@
                     throw TypeError(".pg_query.CallStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CallStmt();
                 if (object.funccall != null) {
@@ -99225,7 +99226,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -99333,7 +99334,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.atomic != null && Object.hasOwnProperty.call(message, "atomic"))
                     writer.uint32(/* id 1, wireType 0 =*/8).bool(message.atomic);
@@ -99369,7 +99370,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -99433,7 +99434,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.atomic != null && Object.hasOwnProperty.call(message, "atomic"))
                     if (typeof message.atomic !== "boolean")
@@ -99456,7 +99457,7 @@
                     throw TypeError(".pg_query.CallContext: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CallContext();
                 if (object.atomic != null)
@@ -99478,7 +99479,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults)
@@ -99638,7 +99639,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.renameType != null && Object.hasOwnProperty.call(message, "renameType"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.renameType);
@@ -99688,7 +99689,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -99780,7 +99781,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.renameType != null && Object.hasOwnProperty.call(message, "renameType"))
                     switch (message.renameType) {
@@ -99946,7 +99947,7 @@
                     throw TypeError(".pg_query.RenameStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.RenameStmt();
                 switch (object.renameType) {
@@ -100442,7 +100443,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -100597,7 +100598,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.objectType != null && Object.hasOwnProperty.call(message, "objectType"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.objectType);
@@ -100641,7 +100642,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -100721,7 +100722,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.objectType != null && Object.hasOwnProperty.call(message, "objectType"))
                     switch (message.objectType) {
@@ -100818,7 +100819,7 @@
                     throw TypeError(".pg_query.AlterObjectDependsStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterObjectDependsStmt();
                 switch (object.objectType) {
@@ -101075,7 +101076,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -101221,7 +101222,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.objectType != null && Object.hasOwnProperty.call(message, "objectType"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.objectType);
@@ -101265,7 +101266,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -101345,7 +101346,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.objectType != null && Object.hasOwnProperty.call(message, "objectType"))
                     switch (message.objectType) {
@@ -101440,7 +101441,7 @@
                     throw TypeError(".pg_query.AlterObjectSchemaStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterObjectSchemaStmt();
                 switch (object.objectType) {
@@ -101694,7 +101695,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -101831,7 +101832,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.objectType != null && Object.hasOwnProperty.call(message, "objectType"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.objectType);
@@ -101873,7 +101874,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -101949,7 +101950,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.objectType != null && Object.hasOwnProperty.call(message, "objectType"))
                     switch (message.objectType) {
@@ -102043,7 +102044,7 @@
                     throw TypeError(".pg_query.AlterOwnerStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterOwnerStmt();
                 switch (object.objectType) {
@@ -102298,7 +102299,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -102415,7 +102416,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.opername != null && Object.hasOwnProperty.call(message, "opername"))
                     $root.pg_query.ObjectWithArgs.encode(message.opername, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -102454,7 +102455,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -102524,7 +102525,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.opername != null && Object.hasOwnProperty.call(message, "opername")) {
                     var error = $root.pg_query.ObjectWithArgs.verify(message.opername, long + 1);
@@ -102558,7 +102559,7 @@
                     throw TypeError(".pg_query.AlterOperatorStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterOperatorStmt();
                 if (object.opername != null) {
@@ -102593,7 +102594,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -102708,7 +102709,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.typeName != null && message.typeName.length)
                     for (var i = 0; i < message.typeName.length; ++i)
@@ -102748,7 +102749,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -102820,7 +102821,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.typeName != null && Object.hasOwnProperty.call(message, "typeName")) {
                     if (!Array.isArray(message.typeName))
@@ -102858,7 +102859,7 @@
                     throw TypeError(".pg_query.AlterTypeStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterTypeStmt();
                 if (object.typeName) {
@@ -102898,7 +102899,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -103060,7 +103061,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.relation != null && Object.hasOwnProperty.call(message, "relation"))
                     $root.pg_query.RangeVar.encode(message.relation, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -103109,7 +103110,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -103199,7 +103200,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.relation != null && Object.hasOwnProperty.call(message, "relation")) {
                     var error = $root.pg_query.RangeVar.verify(message.relation, long + 1);
@@ -103262,7 +103263,7 @@
                     throw TypeError(".pg_query.RuleStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.RuleStmt();
                 if (object.relation != null) {
@@ -103352,7 +103353,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -103481,7 +103482,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.conditionname != null && Object.hasOwnProperty.call(message, "conditionname"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.conditionname);
@@ -103519,7 +103520,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -103587,7 +103588,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.conditionname != null && Object.hasOwnProperty.call(message, "conditionname"))
                     if (!$util.isString(message.conditionname))
@@ -103613,7 +103614,7 @@
                     throw TypeError(".pg_query.NotifyStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.NotifyStmt();
                 if (object.conditionname != null)
@@ -103637,7 +103638,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -103738,7 +103739,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.conditionname != null && Object.hasOwnProperty.call(message, "conditionname"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.conditionname);
@@ -103774,7 +103775,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -103838,7 +103839,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.conditionname != null && Object.hasOwnProperty.call(message, "conditionname"))
                     if (!$util.isString(message.conditionname))
@@ -103861,7 +103862,7 @@
                     throw TypeError(".pg_query.ListenStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.ListenStmt();
                 if (object.conditionname != null)
@@ -103883,7 +103884,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults)
@@ -103980,7 +103981,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.conditionname != null && Object.hasOwnProperty.call(message, "conditionname"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.conditionname);
@@ -104016,7 +104017,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -104080,7 +104081,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.conditionname != null && Object.hasOwnProperty.call(message, "conditionname"))
                     if (!$util.isString(message.conditionname))
@@ -104103,7 +104104,7 @@
                     throw TypeError(".pg_query.UnlistenStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.UnlistenStmt();
                 if (object.conditionname != null)
@@ -104125,7 +104126,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults)
@@ -104268,7 +104269,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.kind != null && Object.hasOwnProperty.call(message, "kind"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.kind);
@@ -104315,7 +104316,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -104401,7 +104402,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.kind != null && Object.hasOwnProperty.call(message, "kind"))
                     switch (message.kind) {
@@ -104459,7 +104460,7 @@
                     throw TypeError(".pg_query.TransactionStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.TransactionStmt();
                 switch (object.kind) {
@@ -104549,7 +104550,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -104676,7 +104677,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.typevar != null && Object.hasOwnProperty.call(message, "typevar"))
                     $root.pg_query.RangeVar.encode(message.typevar, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -104715,7 +104716,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -104785,7 +104786,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.typevar != null && Object.hasOwnProperty.call(message, "typevar")) {
                     var error = $root.pg_query.RangeVar.verify(message.typevar, long + 1);
@@ -104819,7 +104820,7 @@
                     throw TypeError(".pg_query.CompositeTypeStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CompositeTypeStmt();
                 if (object.typevar != null) {
@@ -104854,7 +104855,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -104969,7 +104970,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.typeName != null && message.typeName.length)
                     for (var i = 0; i < message.typeName.length; ++i)
@@ -105009,7 +105010,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -105081,7 +105082,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.typeName != null && Object.hasOwnProperty.call(message, "typeName")) {
                     if (!Array.isArray(message.typeName))
@@ -105119,7 +105120,7 @@
                     throw TypeError(".pg_query.CreateEnumStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreateEnumStmt();
                 if (object.typeName) {
@@ -105159,7 +105160,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -105277,7 +105278,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.typeName != null && message.typeName.length)
                     for (var i = 0; i < message.typeName.length; ++i)
@@ -105317,7 +105318,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -105389,7 +105390,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.typeName != null && Object.hasOwnProperty.call(message, "typeName")) {
                     if (!Array.isArray(message.typeName))
@@ -105427,7 +105428,7 @@
                     throw TypeError(".pg_query.CreateRangeStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreateRangeStmt();
                 if (object.typeName) {
@@ -105467,7 +105468,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -105620,7 +105621,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.typeName != null && message.typeName.length)
                     for (var i = 0; i < message.typeName.length; ++i)
@@ -105667,7 +105668,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -105753,7 +105754,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.typeName != null && Object.hasOwnProperty.call(message, "typeName")) {
                     if (!Array.isArray(message.typeName))
@@ -105797,7 +105798,7 @@
                     throw TypeError(".pg_query.AlterEnumStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterEnumStmt();
                 if (object.typeName) {
@@ -105837,7 +105838,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -106001,7 +106002,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.view != null && Object.hasOwnProperty.call(message, "view"))
                     $root.pg_query.RangeVar.encode(message.view, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -106049,7 +106050,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -106137,7 +106138,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.view != null && Object.hasOwnProperty.call(message, "view")) {
                     var error = $root.pg_query.RangeVar.verify(message.view, long + 1);
@@ -106198,7 +106199,7 @@
                     throw TypeError(".pg_query.ViewStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.ViewStmt();
                 if (object.view != null) {
@@ -106274,7 +106275,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -106395,7 +106396,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.filename != null && Object.hasOwnProperty.call(message, "filename"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.filename);
@@ -106431,7 +106432,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -106495,7 +106496,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.filename != null && Object.hasOwnProperty.call(message, "filename"))
                     if (!$util.isString(message.filename))
@@ -106518,7 +106519,7 @@
                     throw TypeError(".pg_query.LoadStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.LoadStmt();
                 if (object.filename != null)
@@ -106540,7 +106541,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults)
@@ -106647,7 +106648,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.dbname != null && Object.hasOwnProperty.call(message, "dbname"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.dbname);
@@ -106686,7 +106687,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -106756,7 +106757,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.dbname != null && Object.hasOwnProperty.call(message, "dbname"))
                     if (!$util.isString(message.dbname))
@@ -106788,7 +106789,7 @@
                     throw TypeError(".pg_query.CreatedbStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreatedbStmt();
                 if (object.dbname != null)
@@ -106820,7 +106821,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -106934,7 +106935,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.dbname != null && Object.hasOwnProperty.call(message, "dbname"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.dbname);
@@ -106973,7 +106974,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -107043,7 +107044,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.dbname != null && Object.hasOwnProperty.call(message, "dbname"))
                     if (!$util.isString(message.dbname))
@@ -107075,7 +107076,7 @@
                     throw TypeError(".pg_query.AlterDatabaseStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterDatabaseStmt();
                 if (object.dbname != null)
@@ -107107,7 +107108,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -107211,7 +107212,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.dbname != null && Object.hasOwnProperty.call(message, "dbname"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.dbname);
@@ -107247,7 +107248,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -107311,7 +107312,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.dbname != null && Object.hasOwnProperty.call(message, "dbname"))
                     if (!$util.isString(message.dbname))
@@ -107334,7 +107335,7 @@
                     throw TypeError(".pg_query.AlterDatabaseRefreshCollStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterDatabaseRefreshCollStmt();
                 if (object.dbname != null)
@@ -107356,7 +107357,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults)
@@ -107462,7 +107463,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.dbname != null && Object.hasOwnProperty.call(message, "dbname"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.dbname);
@@ -107500,7 +107501,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -107568,7 +107569,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.dbname != null && Object.hasOwnProperty.call(message, "dbname"))
                     if (!$util.isString(message.dbname))
@@ -107596,7 +107597,7 @@
                     throw TypeError(".pg_query.AlterDatabaseSetStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterDatabaseSetStmt();
                 if (object.dbname != null)
@@ -107623,7 +107624,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -107743,7 +107744,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.dbname != null && Object.hasOwnProperty.call(message, "dbname"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.dbname);
@@ -107784,7 +107785,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -107858,7 +107859,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.dbname != null && Object.hasOwnProperty.call(message, "dbname"))
                     if (!$util.isString(message.dbname))
@@ -107893,7 +107894,7 @@
                     throw TypeError(".pg_query.DropdbStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.DropdbStmt();
                 if (object.dbname != null)
@@ -107927,7 +107928,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -108035,7 +108036,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.setstmt != null && Object.hasOwnProperty.call(message, "setstmt"))
                     $root.pg_query.VariableSetStmt.encode(message.setstmt, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -108071,7 +108072,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -108135,7 +108136,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.setstmt != null && Object.hasOwnProperty.call(message, "setstmt")) {
                     var error = $root.pg_query.VariableSetStmt.verify(message.setstmt, long + 1);
@@ -108160,7 +108161,7 @@
                     throw TypeError(".pg_query.AlterSystemStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterSystemStmt();
                 if (object.setstmt != null) {
@@ -108185,7 +108186,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults)
@@ -108301,7 +108302,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.relation != null && Object.hasOwnProperty.call(message, "relation"))
                     $root.pg_query.RangeVar.encode(message.relation, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -108342,7 +108343,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -108416,7 +108417,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.relation != null && Object.hasOwnProperty.call(message, "relation")) {
                     var error = $root.pg_query.RangeVar.verify(message.relation, long + 1);
@@ -108453,7 +108454,7 @@
                     throw TypeError(".pg_query.ClusterStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.ClusterStmt();
                 if (object.relation != null) {
@@ -108490,7 +108491,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -108618,7 +108619,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.options != null && message.options.length)
                     for (var i = 0; i < message.options.length; ++i)
@@ -108660,7 +108661,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -108736,7 +108737,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.options != null && Object.hasOwnProperty.call(message, "options")) {
                     if (!Array.isArray(message.options))
@@ -108777,7 +108778,7 @@
                     throw TypeError(".pg_query.VacuumStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.VacuumStmt();
                 if (object.options) {
@@ -108819,7 +108820,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -108949,7 +108950,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.relation != null && Object.hasOwnProperty.call(message, "relation"))
                     $root.pg_query.RangeVar.encode(message.relation, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -108990,7 +108991,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -109064,7 +109065,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.relation != null && Object.hasOwnProperty.call(message, "relation")) {
                     var error = $root.pg_query.RangeVar.verify(message.relation, long + 1);
@@ -109101,7 +109102,7 @@
                     throw TypeError(".pg_query.VacuumRelation: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.VacuumRelation();
                 if (object.relation != null) {
@@ -109138,7 +109139,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -109256,7 +109257,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.query != null && Object.hasOwnProperty.call(message, "query"))
                     $root.pg_query.Node.encode(message.query, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -109295,7 +109296,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -109365,7 +109366,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.query != null && Object.hasOwnProperty.call(message, "query")) {
                     var error = $root.pg_query.Node.verify(message.query, long + 1);
@@ -109399,7 +109400,7 @@
                     throw TypeError(".pg_query.ExplainStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.ExplainStmt();
                 if (object.query != null) {
@@ -109434,7 +109435,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -109574,7 +109575,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.query != null && Object.hasOwnProperty.call(message, "query"))
                     $root.pg_query.Node.encode(message.query, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -109618,7 +109619,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -109698,7 +109699,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.query != null && Object.hasOwnProperty.call(message, "query")) {
                     var error = $root.pg_query.Node.verify(message.query, long + 1);
@@ -109793,7 +109794,7 @@
                     throw TypeError(".pg_query.CreateTableAsStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreateTableAsStmt();
                 if (object.query != null) {
@@ -110047,7 +110048,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -110175,7 +110176,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.concurrent != null && Object.hasOwnProperty.call(message, "concurrent"))
                     writer.uint32(/* id 1, wireType 0 =*/8).bool(message.concurrent);
@@ -110215,7 +110216,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -110287,7 +110288,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.concurrent != null && Object.hasOwnProperty.call(message, "concurrent"))
                     if (typeof message.concurrent !== "boolean")
@@ -110318,7 +110319,7 @@
                     throw TypeError(".pg_query.RefreshMatViewStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.RefreshMatViewStmt();
                 if (object.concurrent != null)
@@ -110347,7 +110348,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -110442,7 +110443,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 return writer;
             };
@@ -110476,7 +110477,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -110536,7 +110537,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 return null;
             };
@@ -110655,7 +110656,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.target != null && Object.hasOwnProperty.call(message, "target"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.target);
@@ -110691,7 +110692,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -110755,7 +110756,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.target != null && Object.hasOwnProperty.call(message, "target"))
                     switch (message.target) {
@@ -110786,7 +110787,7 @@
                     throw TypeError(".pg_query.DiscardStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.DiscardStmt();
                 switch (object.target) {
@@ -110834,7 +110835,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults)
@@ -110950,7 +110951,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.relations != null && message.relations.length)
                     for (var i = 0; i < message.relations.length; ++i)
@@ -110991,7 +110992,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -111065,7 +111066,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.relations != null && Object.hasOwnProperty.call(message, "relations")) {
                     if (!Array.isArray(message.relations))
@@ -111100,7 +111101,7 @@
                     throw TypeError(".pg_query.LockStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.LockStmt();
                 if (object.relations) {
@@ -111134,7 +111135,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -111252,7 +111253,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.constraints != null && message.constraints.length)
                     for (var i = 0; i < message.constraints.length; ++i)
@@ -111291,7 +111292,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -111361,7 +111362,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.constraints != null && Object.hasOwnProperty.call(message, "constraints")) {
                     if (!Array.isArray(message.constraints))
@@ -111393,7 +111394,7 @@
                     throw TypeError(".pg_query.ConstraintsSetStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.ConstraintsSetStmt();
                 if (object.constraints) {
@@ -111425,7 +111426,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -111557,7 +111558,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.kind != null && Object.hasOwnProperty.call(message, "kind"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.kind);
@@ -111600,7 +111601,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -111678,7 +111679,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.kind != null && Object.hasOwnProperty.call(message, "kind"))
                     switch (message.kind) {
@@ -111727,7 +111728,7 @@
                     throw TypeError(".pg_query.ReindexStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.ReindexStmt();
                 switch (object.kind) {
@@ -111796,7 +111797,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -111945,7 +111946,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.conversion_name != null && message.conversion_name.length)
                     for (var i = 0; i < message.conversion_name.length; ++i)
@@ -111991,7 +111992,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -112075,7 +112076,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.conversion_name != null && Object.hasOwnProperty.call(message, "conversion_name")) {
                     if (!Array.isArray(message.conversion_name))
@@ -112122,7 +112123,7 @@
                     throw TypeError(".pg_query.CreateConversionStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreateConversionStmt();
                 if (object.conversion_name) {
@@ -112168,7 +112169,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -112322,7 +112323,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.sourcetype != null && Object.hasOwnProperty.call(message, "sourcetype"))
                     $root.pg_query.TypeName.encode(message.sourcetype, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -112366,7 +112367,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -112446,7 +112447,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.sourcetype != null && Object.hasOwnProperty.call(message, "sourcetype")) {
                     var error = $root.pg_query.TypeName.verify(message.sourcetype, long + 1);
@@ -112495,7 +112496,7 @@
                     throw TypeError(".pg_query.CreateCastStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreateCastStmt();
                 if (object.sourcetype != null) {
@@ -112560,7 +112561,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -112706,7 +112707,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.replace != null && Object.hasOwnProperty.call(message, "replace"))
                     writer.uint32(/* id 1, wireType 0 =*/8).bool(message.replace);
@@ -112750,7 +112751,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -112830,7 +112831,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.replace != null && Object.hasOwnProperty.call(message, "replace"))
                     if (typeof message.replace !== "boolean")
@@ -112871,7 +112872,7 @@
                     throw TypeError(".pg_query.CreateTransformStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreateTransformStmt();
                 if (object.replace != null)
@@ -112910,7 +112911,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -113039,7 +113040,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
@@ -113080,7 +113081,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -113154,7 +113155,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                     if (!$util.isString(message.name))
@@ -113191,7 +113192,7 @@
                     throw TypeError(".pg_query.PrepareStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.PrepareStmt();
                 if (object.name != null)
@@ -113228,7 +113229,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -113346,7 +113347,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
@@ -113385,7 +113386,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -113455,7 +113456,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                     if (!$util.isString(message.name))
@@ -113487,7 +113488,7 @@
                     throw TypeError(".pg_query.ExecuteStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.ExecuteStmt();
                 if (object.name != null)
@@ -113519,7 +113520,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -113641,7 +113642,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.name);
@@ -113681,7 +113682,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -113753,7 +113754,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.name != null && Object.hasOwnProperty.call(message, "name"))
                     if (!$util.isString(message.name))
@@ -113782,7 +113783,7 @@
                     throw TypeError(".pg_query.DeallocateStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.DeallocateStmt();
                 if (object.name != null)
@@ -113808,7 +113809,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -113922,7 +113923,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.roles != null && message.roles.length)
                     for (var i = 0; i < message.roles.length; ++i)
@@ -113961,7 +113962,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -114031,7 +114032,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.roles != null && Object.hasOwnProperty.call(message, "roles")) {
                     if (!Array.isArray(message.roles))
@@ -114069,7 +114070,7 @@
                     throw TypeError(".pg_query.DropOwnedStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.DropOwnedStmt();
                 if (object.roles) {
@@ -114119,7 +114120,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -114233,7 +114234,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.roles != null && message.roles.length)
                     for (var i = 0; i < message.roles.length; ++i)
@@ -114272,7 +114273,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -114342,7 +114343,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.roles != null && Object.hasOwnProperty.call(message, "roles")) {
                     if (!Array.isArray(message.roles))
@@ -114376,7 +114377,7 @@
                     throw TypeError(".pg_query.ReassignOwnedStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.ReassignOwnedStmt();
                 if (object.roles) {
@@ -114411,7 +114412,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -114526,7 +114527,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.dictname != null && message.dictname.length)
                     for (var i = 0; i < message.dictname.length; ++i)
@@ -114566,7 +114567,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -114638,7 +114639,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.dictname != null && Object.hasOwnProperty.call(message, "dictname")) {
                     if (!Array.isArray(message.dictname))
@@ -114676,7 +114677,7 @@
                     throw TypeError(".pg_query.AlterTSDictionaryStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterTSDictionaryStmt();
                 if (object.dictname) {
@@ -114716,7 +114717,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -114880,7 +114881,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.kind != null && Object.hasOwnProperty.call(message, "kind"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.kind);
@@ -114931,7 +114932,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -115025,7 +115026,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.kind != null && Object.hasOwnProperty.call(message, "kind"))
                     switch (message.kind) {
@@ -115093,7 +115094,7 @@
                     throw TypeError(".pg_query.AlterTSConfigurationStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterTSConfigurationStmt();
                 switch (object.kind) {
@@ -115181,7 +115182,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -115327,7 +115328,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.relation != null && Object.hasOwnProperty.call(message, "relation"))
                     $root.pg_query.RangeVar.encode(message.relation, writer.uint32(/* id 1, wireType 2 =*/10).fork(), q + 1).ldelim();
@@ -115368,7 +115369,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -115442,7 +115443,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.relation != null && Object.hasOwnProperty.call(message, "relation")) {
                     var error = $root.pg_query.RangeVar.verify(message.relation, long + 1);
@@ -115481,7 +115482,7 @@
                     throw TypeError(".pg_query.PublicationTable: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.PublicationTable();
                 if (object.relation != null) {
@@ -115521,7 +115522,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults)
@@ -115656,7 +115657,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.pubobjtype != null && Object.hasOwnProperty.call(message, "pubobjtype"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.pubobjtype);
@@ -115698,7 +115699,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -115774,7 +115775,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.pubobjtype != null && Object.hasOwnProperty.call(message, "pubobjtype"))
                     switch (message.pubobjtype) {
@@ -115816,7 +115817,7 @@
                     throw TypeError(".pg_query.PublicationObjSpec: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.PublicationObjSpec();
                 switch (object.pubobjtype) {
@@ -115873,7 +115874,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -116009,7 +116010,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.pubname != null && Object.hasOwnProperty.call(message, "pubname"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.pubname);
@@ -116053,7 +116054,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -116133,7 +116134,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.pubname != null && Object.hasOwnProperty.call(message, "pubname"))
                     if (!$util.isString(message.pubname))
@@ -116177,7 +116178,7 @@
                     throw TypeError(".pg_query.CreatePublicationStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreatePublicationStmt();
                 if (object.pubname != null)
@@ -116221,7 +116222,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -116374,7 +116375,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.pubname != null && Object.hasOwnProperty.call(message, "pubname"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.pubname);
@@ -116420,7 +116421,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -116504,7 +116505,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.pubname != null && Object.hasOwnProperty.call(message, "pubname"))
                     if (!$util.isString(message.pubname))
@@ -116558,7 +116559,7 @@
                     throw TypeError(".pg_query.AlterPublicationStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterPublicationStmt();
                 if (object.pubname != null)
@@ -116626,7 +116627,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -116773,7 +116774,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.subname != null && Object.hasOwnProperty.call(message, "subname"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.subname);
@@ -116817,7 +116818,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -116897,7 +116898,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.subname != null && Object.hasOwnProperty.call(message, "subname"))
                     if (!$util.isString(message.subname))
@@ -116941,7 +116942,7 @@
                     throw TypeError(".pg_query.CreateSubscriptionStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.CreateSubscriptionStmt();
                 if (object.subname != null)
@@ -116985,7 +116986,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -117138,7 +117139,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.kind != null && Object.hasOwnProperty.call(message, "kind"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.kind);
@@ -117184,7 +117185,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -117268,7 +117269,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.kind != null && Object.hasOwnProperty.call(message, "kind"))
                     switch (message.kind) {
@@ -117327,7 +117328,7 @@
                     throw TypeError(".pg_query.AlterSubscriptionStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.AlterSubscriptionStmt();
                 switch (object.kind) {
@@ -117415,7 +117416,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.arrays || options.defaults) {
@@ -117551,7 +117552,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.subname != null && Object.hasOwnProperty.call(message, "subname"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.subname);
@@ -117591,7 +117592,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -117663,7 +117664,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.subname != null && Object.hasOwnProperty.call(message, "subname"))
                     if (!$util.isString(message.subname))
@@ -117698,7 +117699,7 @@
                     throw TypeError(".pg_query.DropSubscriptionStmt: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.DropSubscriptionStmt();
                 if (object.subname != null)
@@ -117742,7 +117743,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {
@@ -119601,7 +119602,7 @@
                     writer = $Writer.create();
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 if (message.start != null && Object.hasOwnProperty.call(message, "start"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int32(message.start);
@@ -119643,7 +119644,7 @@
                     reader = $Reader.create(reader);
                 if (long === undefined)
                     long = 0;
-                if (long > $Reader.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var end, message;
                 if (length === undefined)
@@ -119719,7 +119720,7 @@
                     return "object expected";
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     return "maximum nesting depth exceeded";
                 if (message.start != null && Object.hasOwnProperty.call(message, "start"))
                     if (!$util.isInteger(message.start))
@@ -120304,7 +120305,7 @@
                     throw TypeError(".pg_query.ScanToken: object expected");
                 if (long === undefined)
                     long = 0;
-                if (long > $util.recursionLimit)
+                if (long > $pgRecursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var message = new $root.pg_query.ScanToken();
                 if (object.start != null)
@@ -122532,7 +122533,7 @@
                     options = {};
                 if (q === undefined)
                     q = 0;
-                if (q > $util.recursionLimit)
+                if (q > $pgRecursionLimit)
                     throw Error("max depth exceeded");
                 var object = {};
                 if (options.defaults) {

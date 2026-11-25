@@ -2,6 +2,16 @@ const query = require("../");
 const { expect } = require("chai");
 const { omit, cloneDeepWith } = require("lodash");
 
+describe("deep PostgreSQL expressions", () => {
+  it("round-trips a SELECT with 50 chained additions", async () => {
+    const sql = `SELECT ${Array(51).fill("1").join(" + ")}`;
+    const parsed = await query.parseQuery(sql);
+    const deparsed = await query.deparse(parsed);
+    expect(deparsed.replace(/[()]/g, "")).to.eq(sql);
+    expect(query.deparseSync(parsed)).to.eq(deparsed);
+  });
+});
+
 
 
 describe("Queries", () => {
