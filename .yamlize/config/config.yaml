@@ -2,4 +2,4 @@ git:
   USER_NAME: Cosmology
   USER_EMAIL: developers@cosmology.zone
 EMSCRIPTEN_VERSION: '3.1.59'
-NODE_VERSION: '20.x'
+NODE_VERSION: '22.x'
